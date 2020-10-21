@@ -1,0 +1,22 @@
+#+ endpoint: https://graphdb.dumontierlab.com/repositories/NeuroDKG
+#+ endpoint_in_url: False
+#+ summary:  List all claims related to the health effect of a specific food
+#+ description: What are claims related to a specific food/food component health effect? 
+#+ tags:
+#+   - Retrieve claims
+#+ method: GET
+#+ pagination: 100
+#+ defaults:
+#+   - diseaselabel: schizophrenia
+# enumerate:
+#   - food:
+#     - https://foodb.ca/compounds/FDB003513
+
+PREFIX neurodkg: <http://www.w3id.org/neurodkg:> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select * where { 
+    ?context neurodkg:drug ?drug .
+    ?context neurodkg:disease  ?disease .
+    ?disease rdfs:label ?disease_label .
+    FILTER regex(?disease_label, ?_diseaselabel)
+}
