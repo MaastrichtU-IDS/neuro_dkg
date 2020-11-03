@@ -4,7 +4,7 @@ Knowledge Graph for Neurological Disorders' Drugs
 
 [![Generate RDF from Google doc](https://github.com/MaastrichtU-IDS/neuro_dkg/workflows/Generate%20RDF%20from%20Google%20doc/badge.svg)](https://github.com/MaastrichtU-IDS/neuro_dkg/actions)
 
-A RDF knowledge graph for food health claims.
+A RDF knowledge graph for contexts of neurological drug prescriptions. 
 
 The easiest way to explore the knowledge graph is to use the various API calls at http://grlc.io/api-git/MaastrichtU-IDS/neuro_dkg
 
