@@ -2,3 +2,4 @@ pandas
 rdflib
 xlrd
 pyshacl
+requests
