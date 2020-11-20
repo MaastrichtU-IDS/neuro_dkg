@@ -1,0 +1,167 @@
+@prefix :      <http://www.semanticweb.org/p70067269/ontologies/2020/10/untitled-ontology-37#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix afn:   <http://jena.apache.org/ARQ/function#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://astrea.linkeddata.es/shapes#96caafb4964a04cea170c4ad5b8c278d>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/MedicalCondition> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://www.w3id.org/neurodkg:hasDisease> .
+
+<https://astrea.linkeddata.es/shapes#4175f60247d71ae307f9d7605f2628d6>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#157ede0a2c75b70f072ee4e402f108f0> , <https://astrea.linkeddata.es/shapes#5798f16876986cab2f18c5149205c8f3> ;
+        sh:targetClass  <https://schema.org/MedicalCondition> .
+
+<https://astrea.linkeddata.es/shapes#9c3e446e7f4a6ab7dd4d17eb15b92809>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <http://www.w3id.org/neurodkg:SymptomaticRelief> .
+
+<https://astrea.linkeddata.es/shapes#275f990eecaeb9a53cb162a20431fc24>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/MedicalCondition> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <https://schema.org/healthCondition> .
+
+<http://astrea.linkeddata.es/report>
+        a       <https://w3id.org/def/astrea#ShapeReport> ;
+        <https://w3id.org/def/astrea#contains>
+                <https://astrea.linkeddata.es/shapes#327a8b06b46450b50baf851ceaf39bd8> , <https://astrea.linkeddata.es/shapes#72f9703eac04951a6ced548a6911d6f7> , <https://astrea.linkeddata.es/shapes#74df5b85403c11c9ccbc7f4cc3156011> , <https://astrea.linkeddata.es/shapes#4175f60247d71ae307f9d7605f2628d6> , <https://astrea.linkeddata.es/shapes#34b235e223bc6acd182cae598c6d860f> , <https://astrea.linkeddata.es/shapes#443a86b96845cd4295a74883eb090342> , <https://astrea.linkeddata.es/shapes#9c3e446e7f4a6ab7dd4d17eb15b92809> , <https://astrea.linkeddata.es/shapes#d1fa8ef692ce0fc409f2fc7e84dec79e> , <https://astrea.linkeddata.es/shapes#5798f16876986cab2f18c5149205c8f3> , <https://astrea.linkeddata.es/shapes#96caafb4964a04cea170c4ad5b8c278d> , <https://astrea.linkeddata.es/shapes#18536ff1a3c544cd8ce89f16c2bf4502> , <https://astrea.linkeddata.es/shapes#0867b97fa7320f6f2b21adf1e6d8fbda> , <https://astrea.linkeddata.es/shapes#c46f1f3e0b4850ab1d0439714757e78a> , <https://astrea.linkeddata.es/shapes#c5bb4031e8631eb227f9d0e67e47d2bb> , <https://astrea.linkeddata.es/shapes#347eff24e78f25941d4088b4077dc5c8> , <https://astrea.linkeddata.es/shapes#4233fda6d4ac2f9d581da205696aa174> , <https://astrea.linkeddata.es/shapes#dc5cfaf2b63c3fe7f033a3e0045f2fff> , <https://astrea.linkeddata.es/shapes#556ec3acc418974048e189f1282c64bf> , <https://astrea.linkeddata.es/shapes#53edf8775b2d6daca99f48977ca6e2b6> , <https://astrea.linkeddata.es/shapes#157ede0a2c75b70f072ee4e402f108f0> , <https://astrea.linkeddata.es/shapes#9b92203e1cc04a8577f8ec1cd43fd6cf> , <https://astrea.linkeddata.es/shapes#275f990eecaeb9a53cb162a20431fc24> , <https://astrea.linkeddata.es/shapes#684f1385c29d54a3c1645e52f8418dd5> , <https://astrea.linkeddata.es/shapes#8f9c95b5ed6572dcf82a717383b43aa5> , <https://astrea.linkeddata.es/shapes#8d7514d2f7f53fab0bd5cf4465472b26> ;
+        <https://w3id.org/def/astrea#generatedShapesFrom>
+                <https://astrea.linkeddata.es/report/0620946147> .
+
+<https://astrea.linkeddata.es/shapes#8d7514d2f7f53fab0bd5cf4465472b26>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#53edf8775b2d6daca99f48977ca6e2b6> , <https://astrea.linkeddata.es/shapes#327a8b06b46450b50baf851ceaf39bd8> ;
+        sh:targetClass  <https://schema.org/MedicalTherapy> .
+
+<https://astrea.linkeddata.es/shapes#72f9703eac04951a6ced548a6911d6f7>
+        a            sh:PropertyShape ;
+        sh:datatype  rdfs:Literal ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <https://schema.org/audienceType> .
+
+<https://astrea.linkeddata.es/shapes#d1fa8ef692ce0fc409f2fc7e84dec79e>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://schema.org/MedicalSymptom> .
+
+<https://astrea.linkeddata.es/shapes#684f1385c29d54a3c1645e52f8418dd5>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/PeopleAudience> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <https://schema.org/targetPopulation> .
+
+<https://astrea.linkeddata.es/shapes#c5bb4031e8631eb227f9d0e67e47d2bb>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#74df5b85403c11c9ccbc7f4cc3156011> , <https://astrea.linkeddata.es/shapes#443a86b96845cd4295a74883eb090342> , <https://astrea.linkeddata.es/shapes#275f990eecaeb9a53cb162a20431fc24> , <https://astrea.linkeddata.es/shapes#0867b97fa7320f6f2b21adf1e6d8fbda> , <https://astrea.linkeddata.es/shapes#8f9c95b5ed6572dcf82a717383b43aa5> , <https://astrea.linkeddata.es/shapes#72f9703eac04951a6ced548a6911d6f7> , <https://astrea.linkeddata.es/shapes#556ec3acc418974048e189f1282c64bf> ;
+        sh:targetClass  <https://schema.org/PeopleAudience> .
+
+<https://astrea.linkeddata.es/shapes#157ede0a2c75b70f072ee4e402f108f0>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/MedicalTherapy> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <https://schema.org/possibleTreatment> .
+
+<https://astrea.linkeddata.es/shapes#dc5cfaf2b63c3fe7f033a3e0045f2fff>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/TreatmentIndication> , <https://schema.org/PreventionIndication> , <http://www.w3id.org/neurodkg:SymptomaticRelief> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://www.w3id.org/neurodkg:useType> .
+
+<https://astrea.linkeddata.es/shapes#18536ff1a3c544cd8ce89f16c2bf4502>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <http://www.w3id.org/neurodkg:Response> .
+
+<https://astrea.linkeddata.es/shapes#443a86b96845cd4295a74883eb090342>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/MedicalCondition> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://www.w3id.org/neurodkg:hasComorbidity> .
+
+<https://astrea.linkeddata.es/shapes#556ec3acc418974048e189f1282c64bf>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/MedicalSymptom> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://www.w3id.org/neurodkg:hasSymptom> .
+
+<https://astrea.linkeddata.es/shapes#327a8b06b46450b50baf851ceaf39bd8>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/Drug> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <https://schema.org/drug> .
+
+<https://astrea.linkeddata.es/shapes#53edf8775b2d6daca99f48977ca6e2b6>
+        a            sh:PropertyShape ;
+        sh:class     <http://www.w3id.org/neurodkg:Response> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <https://schema.org/adverseOutcome> .
+
+<https://astrea.linkeddata.es/shapes#8f9c95b5ed6572dcf82a717383b43aa5>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:integer ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <https://schema.org/requiredMaxAge> ;
+        sh:pattern   "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#c46f1f3e0b4850ab1d0439714757e78a>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/Drug> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://www.w3id.org/neurodkg:hasDrug> .
+
+<https://astrea.linkeddata.es/report/0620946147>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Shapes generated with no errors" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "200"^^xsd:int .
+
+<https://astrea.linkeddata.es/shapes#9b92203e1cc04a8577f8ec1cd43fd6cf>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://schema.org/TreatmentIndication> .
+
+<https://astrea.linkeddata.es/shapes#0867b97fa7320f6f2b21adf1e6d8fbda>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/MedicalTherapy> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <http://www.w3id.org/neurodkg:hasTreatment> .
+
+<https://astrea.linkeddata.es/shapes#5798f16876986cab2f18c5149205c8f3>
+        a            sh:PropertyShape ;
+        sh:class     <https://schema.org/MedicalSymptom> ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      <https://schema.org/signOrSymptom> .
+
+<https://astrea.linkeddata.es/shapes#74df5b85403c11c9ccbc7f4cc3156011>
+        a            sh:PropertyShape ;
+        sh:datatype  xsd:integer ;
+        sh:nodeKind  sh:Literal ;
+        sh:path      <https://schema.org/requiredMinAge> ;
+        sh:pattern   "[\\-+]?[0-9]+" .
+
+<https://astrea.linkeddata.es/shapes#4233fda6d4ac2f9d581da205696aa174>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://schema.org/PreventionIndication> .
+
+<https://astrea.linkeddata.es/shapes#347eff24e78f25941d4088b4077dc5c8>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#dc5cfaf2b63c3fe7f033a3e0045f2fff> , <https://astrea.linkeddata.es/shapes#96caafb4964a04cea170c4ad5b8c278d> , <https://astrea.linkeddata.es/shapes#684f1385c29d54a3c1645e52f8418dd5> , <https://astrea.linkeddata.es/shapes#c46f1f3e0b4850ab1d0439714757e78a> ;
+        sh:targetClass  <http://www.w3id.org/neurodkg:MedicalContext> .
+
+<https://astrea.linkeddata.es/shapes#34b235e223bc6acd182cae598c6d860f>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  <https://schema.org/Drug> .

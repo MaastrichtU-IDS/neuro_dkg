@@ -1,0 +1,23 @@
+
+#+ endpoint: https://graphdb.dumontierlab.com/repositories/NeuroDKG
+#+ endpoint_in_url: False
+#+ summary:  lists symptoms (of a disease) can be treated by a given drug.
+#+ description: lists symptoms (of a disease) can be treated by a given drug.
+#+ tags:
+#+   - Retrieve claims
+#+ method: GET
+#+ pagination: 100
+#+ defaults:
+#+   - symptomlabel: schizophrenia
+#+   - druglabel: clozapine
+
+PREFIX neurodkg: <http://www.w3id.org/neurodkg:>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?TargetGroup ?symptom_label ?drug ?drug_label  where { 
+    ?TargetGroup  neurodkg:hasSymptom ?symptom .
+    ?symptom  rdfs:label ?symptom_label .
+    ?context neurodkg:drug ?drug .
+    ?drug rdfs:label ?drug_label .
+    FILTER regex(?symptom_label, ?_symptomlabel)
+    FILTER regex(?drug_label, ?_druglabel)
+} limit 100 
