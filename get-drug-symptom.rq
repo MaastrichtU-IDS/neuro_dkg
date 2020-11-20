@@ -20,4 +20,5 @@ select ?TargetGroup ?symptom_label ?drug ?drug_label  where {
     ?drug rdfs:label ?drug_label .
     FILTER regex(?symptom_label, ?_symptomlabel)
     FILTER regex(?drug_label, ?_druglabel)
-} limit 100 
+}
+ 
