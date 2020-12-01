@@ -13,7 +13,7 @@ PREFIX : <https://w3id.org/neurodkg/>
 
 CONSTRUCT {   
  ?association
-    bl:association_type bl:ChemicalToGeneAssociation ;
+    bl:association_type bl:ChemicalToDiseaseAssociation ;
     rdfs:label ?label ;
     rdf:subject ?subject ;
     rdf:predicate bl:treats ;
