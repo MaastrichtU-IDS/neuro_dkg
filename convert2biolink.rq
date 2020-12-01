@@ -30,7 +30,7 @@ CONSTRUCT {
   ?targetgroup a eco:0000180 ;
     bl:category bl:EvidenceType ;
     bl:has_drug ?subject;
-    bl:has_phenotype ?phenotype .
+    bl:has_phenotype ?ph_c . #?ph_meddra, ?ph_snomect, ?ph_umls, ?ph .
 
   ?subject bl:category bl:Drug .
   ?object bl:category bl:Disease . 
@@ -46,7 +46,7 @@ CONSTRUCT {
     OPTIONAL {?tg n:hasSymptom ?ph .}
     OPTIONAL { ?tg n:hasAgeGroup ?ag . }
     OPTIONAL {?tg n:hasMinAge ?ma . }
- # FILTER (?i = nd:context8)
+  #FILTER (?i = nd:context8)
  
   
 BIND( IF(bound(?ag), URI(CONCAT(str(?tg), "_ag")), URI(bnode() )) AS ?lifestage)
@@ -54,10 +54,17 @@ BIND( IF(bound(?ag), URI(CONCAT(str(?tg), "_ma")), URI(bnode() )) AS ?lifestage)
 BIND(URI((REPLACE(lcase(str(?i)),"http://www.w3id.org/neurodkg/instances/", "https://w3id.org/neurodkg/instance/"))) AS ?association)
 BIND(URI((REPLACE(lcase(str(?tg)),"http://www.w3id.org/neurodkg/instances/", "https://w3id.org/neurodkg/instance/"))) AS ?targetgroup)
 BIND(URI((REPLACE(str(?drug),"http://www.w3id.org", "https://identifiers.org"))) AS ?subject)
-BIND(URI((REPLACE(lcase(str(?disease)),"http://purl.bioontology.org/ontology/snomedct/", "https://identifiers.org/snomedct:"))) AS ?object)
-BIND(URI((REPLACE(lcase(str(?disease)),"http://www.w3id.org/doid/", "https://identifiers.org/doid:"))) AS ?object)
-BIND(URI((REPLACE(lcase(str(?ph)),"http://purl.bioontology.org/ontology/meddra/", "https://identifiers.org/meddra:"))) AS ?phenotype)
-BIND(URI((REPLACE(lcase(str(?ph)),"http://purl.bioontology.org/ontology/snomedct/", "https://identifiers.org/snomedct:"))) AS ?phenotype)
-BIND(URI((REPLACE(lcase(str(?ph)),"http://bioportal.bioontology.org/ontologies/umls/", "https://identifiers.org/umls:"))) AS ?phenotype)
+
+BIND (lcase(str(?disease)) AS ?d) 
+BIND (IF (CONTAINS(?d, "doid"), URI(REPLACE(?p, "http://www.w3id.org/doid/", "https://identifiers.org/doid:")), 
+       IF (CONTAINS(?d, "snomedct"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/snomedct/", "https://identifiers.org/snomedct:")),
+        IF (CONTAINS(?d, "umls"), URI(REPLACE(?p, "http://bioportal.bioontology.org/ontologies/umls/", "https://identifiers.org/umls:")),
+          bnode()))) AS ?object)
+  
+BIND (lcase(str(?ph)) AS ?p) 
+BIND (IF (CONTAINS(?p, "meddra"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/meddra/", "https://identifiers.org/meddra:")), 
+       IF (CONTAINS(?p, "snomedct"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/snomedct/", "https://identifiers.org/snomedct:")),
+        IF (CONTAINS(?p, "umls"), URI(REPLACE(?p, "http://bioportal.bioontology.org/ontologies/umls/", "https://identifiers.org/umls:")),
+          bnode()))) AS ?ph_c)
 #BIND(URI("http://dailymed.org") AS ?dailymed)
 } 
