@@ -13,7 +13,7 @@ PREFIX : <https://w3id.org/neurodkg/>
 
 CONSTRUCT {   
  ?association
-    bl:association_type bl:ChemicalToDiseaseAssociation ;
+    bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation ;
     rdfs:label ?label ;
     rdf:subject ?subject ;
     rdf:predicate bl:treats ;
@@ -53,18 +53,18 @@ BIND( IF(bound(?ag), URI(CONCAT(str(?tg), "_ag")), URI(bnode() )) AS ?lifestage)
 BIND( IF(bound(?ag), URI(CONCAT(str(?tg), "_ma")), URI(bnode() )) AS ?lifestage)
 BIND(URI((REPLACE(lcase(str(?i)),"http://www.w3id.org/neurodkg/instances/", "https://w3id.org/neurodkg/instance/"))) AS ?association)
 BIND(URI((REPLACE(lcase(str(?tg)),"http://www.w3id.org/neurodkg/instances/", "https://w3id.org/neurodkg/instance/"))) AS ?targetgroup)
-BIND(URI((REPLACE(str(?drug),"http://www.w3id.org", "https://identifiers.org"))) AS ?subject)
+BIND(URI((REPLACE(str(?drug),"http://www.w3id.org/drugbank:", "http://identifiers.org/drugbank/"))) AS ?subject)
 
 BIND (lcase(str(?disease)) AS ?d) 
-BIND (IF (CONTAINS(?d, "doid"), URI(REPLACE(?p, "http://www.w3id.org/doid/", "https://identifiers.org/doid:")), 
-       IF (CONTAINS(?d, "snomedct"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/snomedct/", "https://identifiers.org/snomedct:")),
-        IF (CONTAINS(?d, "umls"), URI(REPLACE(?p, "http://bioportal.bioontology.org/ontologies/umls/", "https://identifiers.org/umls:")),
+BIND (IF (CONTAINS(?d, "doid"), URI(REPLACE(?p, "http://www.w3id.org/doid/", "http://purl.obolibrary.org/obo/DOID_")), 
+       IF (CONTAINS(?d, "snomedct"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/snomedct/", "http://identifiers.org/snomedct/")),
+        IF (CONTAINS(?d, "umls"), URI(REPLACE(?p, "http://bioportal.bioontology.org/ontologies/umls/", "http://identifiers.org/umls/")),
           bnode()))) AS ?object)
   
 BIND (lcase(str(?ph)) AS ?p) 
-BIND (IF (CONTAINS(?p, "meddra"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/meddra/", "https://identifiers.org/meddra:")), 
-       IF (CONTAINS(?p, "snomedct"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/snomedct/", "https://identifiers.org/snomedct:")),
-        IF (CONTAINS(?p, "umls"), URI(REPLACE(?p, "http://bioportal.bioontology.org/ontologies/umls/", "https://identifiers.org/umls:")),
+BIND (IF (CONTAINS(?p, "meddra"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/meddra/", "http://identifiers.org/meddra/")), 
+       IF (CONTAINS(?p, "snomedct"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/snomedct/", "http://identifiers.org/snomedct/")),
+        IF (CONTAINS(?p, "umls"), URI(REPLACE(?p, "http://bioportal.bioontology.org/ontologies/umls/", "http://identifiers.org/umls/")),
           bnode()))) AS ?ph_c)
 #BIND(URI("http://dailymed.org") AS ?dailymed)
 } 
