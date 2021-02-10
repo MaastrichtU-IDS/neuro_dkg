@@ -1,0 +1,64 @@
+@prefix : <http://purl.org/nanopub/temp/template-boilerplate_> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix eco: <http://purl.obolibrary.org/obo/ECO_> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix schema: <https://schema.org/> .
+@prefix neurodkg: <https://schema.org/> .
+
+:Head {
+  : np:hasAssertion :assertion ;
+    np:hasProvenance :provenance ;
+    np:hasPublicationInfo :pubinfo ;
+    a np:Nanopublication .
+    
+}
+:assertion {
+  eco:0000006 rdfs:label "experimental evidence" .
+  eco:0000180 rdfs:label "clinical study evidence" .
+  eco:0000204 rdfs:label "author statement" .
+  eco:0000205 rdfs:label "curator inference" .
+  eco:0000362 rdfs:label "computational inference" .
+  eco:0005548 rdfs:label "biological system reconstruction evidence based on inference from background scientific knowledge" .
+  eco:0006152 rdfs:label "medical practitioner statement evidence" .
+  eco:0006153 rdfs:label "self-reported individual's statement evidence" .
+  eco:0007672 rdfs:label "computational evidence" .
+
+  sub:assertion a nt:AssertionTemplate ;
+    rdfs:label "Defining a drug indication with its medical context" ;
+    nt:hasStatement sub:st00 .
+
+   sub:medtherapy a nt:UriPlaceholder ;
+    rdfs:label "add the therapy id (eg. therapy01) here" ;
+    nt:hasPrefix "https://w3id.org/neurodkg/instance/" ;
+    nt:hasPrefixLabel "https://w3id.org/neurodkg/instance/" .
+
+  sub:st00 rdf:subject sub:medtherapy ;
+    rdf:predicate rdf:type ;
+    rdf:object schema:MedicalTherapy;
+    a rdf:Statement ;
+    nt:statementOrder 1 .
+  
+
+}
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0001-7769-4272 .
+}
+:pubinfo {
+    npx:supersedes <http://purl.org/np/RAQvds4egZwUiawns6JHGA_jE8Fh0D7M8zXqToNWXXyIs> ""^^xsd:integer .
+  : dct:created "2020-12-07T18:00:00.000+01:00"^^xsd:dateTime ;
+    dct:creator orcid:0000-0001-7769-4272;
+}

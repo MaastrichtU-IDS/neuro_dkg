@@ -1,0 +1,200 @@
+@prefix : <http://purl.org/nanopub/temp/template-boilerplate_> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dctypes: <http://purl.org/dc/dcmitype/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix eco: <http://purl.obolibrary.org/obo/ECO_> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix schema: <https://schema.org/> .
+@prefix nkg: <https://w3id.org/neurodkg/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+:Head {
+  : np:hasAssertion :assertion ;
+    np:hasProvenance :provenance ;
+    np:hasPublicationInfo :pubinfo ;
+    a np:Nanopublication .
+    
+}
+:assertion {
+
+
+  :assertion a nt:AssertionTemplate ;
+    rdfs:label "Defining a drug indication with its medical context" ;
+    nt:hasStatement :st00,  :st01, :st02, :st03, :st04, :st05.
+
+  :medtherapy a nt:LocalResource ;
+    rdfs:label "This medical therapy " .
+
+  :drug a nt:UriPlaceholder ;
+    rdfs:label "add a Drugbank identifier here (e.g. DB00295)" ;
+    nt:hasPrefix "http://identifiers.org/drugbank/" ;
+    nt:hasPrefixLabel " has the drug" ;
+    nt:hasRegex "[A-Z]{2}\d{5}" .
+
+   :disease  a nt:GuidedChoicePlaceholder ;
+    rdfs:label "has disease using DOID" ;
+    nt:possibleValuesFromApi "http://data.bioontology.org/search?pagesize=20&apikey=fd451bec-eacd-4519-b972-90fb6c7007cb&include_properties=false&ontologies=DOID&q=" .
+
+
+  :condition  a nt:LocalResource ;
+    rdfs:label " The condition for target population" .
+
+  :conditionText a nt:LiteralPlaceholder ;
+    rdfs:label "describe the condition here" .
+
+  :conditionURI  a nt:GuidedChoicePlaceholder ;
+    rdfs:label "define the condition for target population using DOID" ;
+    nt:possibleValuesFromApi "http://data.bioontology.org/search?pagesize=20&apikey=fd451bec-eacd-4519-b972-90fb6c7007cb&include_properties=false&ontologies=DOID&q=" .
+
+  :symptom  a nt:GuidedChoicePlaceholder ;
+    rdfs:label "target biomedical entity from Translator NameResolution API" ;
+    nt:possibleValuesFromApi "https://name-resolution-sri.renci.org/lookup?limit=10&string=" .
+
+
+  :targetpop a nt:LocalResource;
+    rdfs:label "The target group" .
+
+  :indi_type a nt:GuidedChoicePlaceholder ;
+    rdfs:label "add the indication type for medical therapy" ;
+    nt:possibleValue schema:TreatmentIndication , schema:PreventionIndication , nkg:SymptomaticReliefIndication, nkg:AdjunctiveTherapy,  schema:ApprovedIndication .
+
+  :audienceType a nt:LiteralPlaceholder;
+    rdfs:label "has the target group (eg. adult, pregnant)" .
+
+  :minAge a nt:LiteralPlaceholder;
+    rdfs:label "Audiences defined by a person's minimum age." ;
+    nt:hasRegex "[0-9]*" .
+
+  :maxAge a nt:LiteralPlaceholder;
+    rdfs:label "Audiences defined by a person's maximum age." ;
+     nt:hasRegex "[0-9]*" .
+
+
+  :quote a nt:LocalResource ;
+    rdfs:label "This quoted text" .
+
+  :quotedtext a nt:LiteralPlaceholder ;
+    rdfs:label "quote the supporting text here" .
+
+  :source a nt:UriPlaceholder ;
+    rdfs:label "add the URL to the source (e.g. DailyMed URL) of the quoted text here" .
+
+
+  :st00 rdf:type nt:OptionalStatement , nt:GroupedStatement ;
+    nt:hasStatement :st00a , :st00b, :st00c ;
+    nt:statementOrder 1 .
+
+
+   :st00a  rdf:object :quote ;
+    rdf:predicate prov:wasDerivedFrom ;
+    rdf:subject :medtherapy ;
+    a rdf:Statement ;
+     nt:statementOrder 1 .
+
+  :st00b  rdf:object :quotedtext ;
+    rdf:predicate prov:value ;
+    rdf:subject :quote ;
+    a rdf:Statement ;
+    nt:statementOrder 2 .
+
+  :st00c rdf:object :source ;
+    rdf:predicate prov:wasQuotedFrom ;
+    rdf:subject :quote ;
+    a rdf:Statement ;
+    nt:statementOrder 3 .
+
+  :st01 rdf:subject :medtherapy ;
+    rdf:predicate schema:drug ;
+    rdf:object :drug;
+    a rdf:Statement ;
+    nt:statementOrder 2 .
+  
+  :st02 rdf:subject :disease ;
+    rdf:predicate schema:possibleTreatment ;
+    rdf:object :medtherapy  ;
+    a rdf:Statement ;
+    nt:statementOrder 3 .
+  
+  :st03 rdf:subject :medtherapy;
+    rdf:predicate nkg:indicationType ;
+    rdf:object  :indi_type   ;
+    a rdf:Statement ;
+    nt:statementOrder 4 .
+  
+
+   :st04 rdf:subject :medtherapy;
+    rdf:predicate schema:targetPopulation ;
+    rdf:object  :targetpop   ;
+    a rdf:Statement ;
+
+    nt:statementOrder 5 .
+
+  :st05 rdf:type nt:OptionalStatement , nt:GroupedStatement ;
+    nt:hasStatement :st05a , :st05b , :st05c, :st05d, :st05e ;
+    nt:statementOrder 6 .
+
+  :st05a rdf:subject :targetpop ;
+    rdf:predicate schema:audienceType ;
+    rdf:object  :audienceType   ;
+    a nt:OptionalStatement , nt:RepeatableStatement ;
+    nt:statementOrder 1 .
+    
+  :st05b rdf:subject :targetpop ;
+    rdf:predicate schema:requiredMinAge ;
+    rdf:object  :minAge   ;
+    a nt:OptionalStatement ;
+    nt:statementOrder 2 .
+
+  :st05c rdf:subject :targetpop ;
+    rdf:predicate schema:requiredMaxAge ;
+    rdf:object  :maxAge   ;
+    a nt:OptionalStatement ;
+    nt:statementOrder 3 .
+
+  :st05d rdf:object  :conditionURI   ;
+    rdf:predicate schema:healthCondition ;
+    rdf:subject :targetpop  ;
+    a nt:OptionalStatement , nt:RepeatableStatement ;
+    nt:statementOrder 4 .
+
+  :st05e rdf:subject :conditionURI ;
+    rdf:predicate schema:signOrSymptom ;
+    rdf:object  :symptom   ;
+    a nt:OptionalStatement , nt:RepeatableStatement ;
+    nt:statementOrder 5 .
+
+  owl:sameAs rdfs:label "corresponds to the term" .
+  prov:wasDerivedFrom rdfs:label "was derived from" .
+  prov:wasQuotedFrom rdfs:label "was quoted from" .
+  schema:audienceType rdfs:label "has type" .
+  schema:requiredMinAge rdfs:label "has min age" .
+  schema:requiredMaxAge rdfs:label "has max age" .
+  schema:signOrSymptom rdfs:label "has symptom" .
+  schema:healthCondition rdfs:label "has health condition" .
+  schema:TreatmentIndication rdfs:label "An indication for treating an underlying condition." .
+  schema:PreventionIndication rdfs:label "An indication for preventing an underlying condition, symptom, etc." .
+  nkg:SymptomaticReliefIndication rdfs:label "An indication for only managing the symptoms of the condition" .
+  schema:ApprovedIndication rdfs:label "An indication for a medical therapy that has been formally specified or approved by a regulatory body." .
+  prov:quotedText rdfs:label "claims" .
+}
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0001-7769-4272 .
+}
+:pubinfo {
+   : dct:created "2021-02-10T18:00:00.000+01:00"^^xsd:dateTime ;
+    dct:creator orcid:0000-0001-7769-4272 ;
+    npx:supercedes <http://purl.org/np/RA1qFYcifL-R-TLdaNFuglOprNuiUZDy2S0bifJPi3aPk> .
+
+}
