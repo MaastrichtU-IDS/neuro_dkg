@@ -1,0 +1,1542 @@
+@prefix bl: <https://w3id.org/biolink/vocab/> .
+@prefix drugbank: <https://identifiers.org/drugbank:> .
+@prefix eco: <https://identifiers.org/eco:> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix n: <http://www.w3id.org/neurodkg:> .
+@prefix nd: <http://www.w3id.org/neurodkg/Instances/> .
+@prefix nkg: <https://w3id.org/neurodkg/> .
+@prefix nkgi: <https://w3id.org/neurodkg/instance/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+nkgi:context10 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00575>;
+  rdfs:label "Clonidine hydrochloride injection is indicated in combination with opiates for the treatment of severe pain in cancer patients that is not adequately relieved by opioid analgesics alone";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup10;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d2b11e61-b2ef-4d20-8973-a4afc6b951ae>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup10 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00575>;
+  bl:has_phenotype <http://identifiers.org/meddra/10054095> .
+
+<http://identifiers.org/drugbank/DB00575> bl:category bl:Drug .
+
+nkgi:context104 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01043>;
+  rdfs:label "Memantine hydrochloride oral solution is indicated for the treatment of moderate to severe dementia of the Alzheimer's type.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup104a, nkgi:targetgroup104b;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4076d3ef-d0a9-96c5-1a15-812c1e42929c>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup104a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01043>;
+  bl:has_phenotype _:node240897 .
+
+<http://identifiers.org/drugbank/DB01043> bl:category bl:Drug .
+
+nkgi:targetgroup104b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01043>;
+  bl:has_phenotype _:node240900 .
+
+nkgi:context117 rdf:object _:node240903 .
+
+_:node240903 bl:category bl:Disease .
+
+nkgi:context117 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00555>;
+  rdfs:label "Lamotrigine tablets are indicated for conversion to monotherapy in adults (aged 16 years and older) with partial-onset seizures who are receiving treatment with carbamazepine, phenytoin, phenobarbital, primidone, or valproate as the single antiepileptic drug (AED).";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup117;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b0f0209-edbd-46f3-9bed-762cbea0d737>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup117 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00555> .
+
+<http://identifiers.org/drugbank/DB00555> bl:category bl:Drug .
+
+nkgi:context119 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00273>;
+  rdfs:label "Topiramate tablets and topiramate capsules are indicated as initial monotherapy for the treatment of partial-onset or primary generalized tonic-clonic seizures in patients 2 years of age and older";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup119;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6f9d59e3-d10d-48f3-af01-83ba3e1e3a2b>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup119 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00273>;
+  bl:has_phenotype _:node240906, _:node240909 .
+
+<http://identifiers.org/drugbank/DB00273> bl:category bl:Drug .
+
+nkgi:context12 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00996>;
+  rdfs:label "Gabapentin capsules, USP are indicated as adjunctive therapy in the treatment of partial seizures with and without secondary generalization in patients over 12 years of age with epilepsy. Gabapentin capsules, USP are also indicated as adjunctive therapy in the treatment of partial seizures in pediatric patients age 3 to 12 years.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup12a, nkgi:targetgroup12b;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0936a88f-b569-49c4-951b-14e8f6273b53>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup12B_ma .
+
+nkgi:targetgroup12a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00996> .
+
+<http://identifiers.org/drugbank/DB00996> bl:category bl:Drug .
+
+nd:TargetGroup12B_ma a bl:LifeStage;
+  rdfs:label "2020-03-12T00:00:00"^^xsd:dateTime .
+
+nkgi:targetgroup12b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00996> .
+
+nkgi:context123 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01224>;
+  rdfs:label "Quetiapine tablets are indicated for the acute treatment of manic episodes associated with bipolar I disorder, both as monotherapy and as an adjunct to lithium or divalproex";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup123;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=904f80af-44b6-d964-1680-ac9e6b61327b>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup123 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01224>;
+  bl:has_phenotype <http://identifiers.org/meddra/10026778> .
+
+<http://identifiers.org/drugbank/DB01224> bl:category bl:Drug .
+
+nkgi:context125 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01224>;
+  rdfs:label "Quetiapine tablets are indicated as monotherapy for the acute treatment of depressive episodes associated with bipolar disorder.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup125;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=904f80af-44b6-d964-1680-ac9e6b61327b>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup125 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01224>;
+  bl:has_phenotype <http://identifiers.org/meddra/10012402> .
+
+nkgi:context13 rdf:object _:node240918 .
+
+_:node240918 bl:category bl:Disease .
+
+nkgi:context13 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00323>;
+  rdfs:label "Tolcapone tablets, USP is indicated as an adjunct to levodopa and carbidopa for the treatment of the signs and symptoms of idiopathic Parkinson's disease";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup13;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d94891be-2fef-4e39-8e35-ab7afe93e78e>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup13 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00323> .
+
+<http://identifiers.org/drugbank/DB00323> bl:category bl:Drug .
+
+nkgi:context132 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00313>;
+  rdfs:label "Divalproex sodium delayed-release capsules are indicated as monotherapy and adjunctive therapy in the treatment of adult patients and pediatric patients down to the age of 10 years with complex partial seizures that occur either in isolation or in association with other types of seizures.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup132;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f911748c-fb3a-fe1a-ab2a-4b40455e05ef>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup132 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00313>;
+  bl:has_phenotype <http://identifiers.org/meddra/10010145> .
+
+<http://identifiers.org/drugbank/DB00313> bl:category bl:Drug .
+
+nkgi:context144 rdf:object _:node240923 .
+
+_:node240923 bl:category bl:Disease .
+
+nkgi:context144 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00776>;
+  rdfs:label "Oxcarbazepine oral suspension is indicated for use as monotherapy or adjunctive therapy in the treatment of partial-onset seizures in adults and as monotherapy in the treatment of partial-onset seizures in pediatric patients aged 4 years and above, and as adjunctive therapy in pediatric patients aged 2 years and above with partial-onset seizures.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup144;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2515391e-3a88-4226-92e5-f641c8409fe5>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup144 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00776> .
+
+<http://identifiers.org/drugbank/DB00776> bl:category bl:Drug .
+
+nkgi:context155 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01576>;
+  rdfs:label "Dextroamphetamine sulfate tablets are indicated in: Narcolepsy and Attention Deficit Disorder with Hyperactivity: As an integral part of a total treatment program that typically includes other remedial measures (psychological, educational, social) for a stabilizing effect in pediatric patients (ages 3 years to 16 years)";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup155;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bed3c03f4-2829-423f-a595-dc09c9cc0e40>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup155_ma .
+
+nd:TargetGroup155_ma a bl:LifeStage;
+  rdfs:label "2020-03-16T00:00:00"^^xsd:dateTime .
+
+nkgi:targetgroup155 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01576> .
+
+<http://identifiers.org/drugbank/DB01576> bl:category bl:Drug .
+
+nkgi:context163 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB11640>;
+  rdfs:label "RUZURGI is indicated for the treatment of Lambert-Eaton myasthenic syndrome (LEMS) in patients 6 to less than 17 years of age.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup163;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2731310a-c060-4d3e-ba41-763d791f63a9>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup163_ma .
+
+nd:TargetGroup163_ma a bl:LifeStage;
+  rdfs:label "2020-06-16T00:00:00"^^xsd:dateTime .
+
+nkgi:targetgroup163 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB11640> .
+
+<http://identifiers.org/drugbank/DB11640> bl:category bl:Drug .
+
+nkgi:context2 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00915>;
+  rdfs:label "Amantadine hydrochloride capsules are also indicated in the treatment of parkinsonism and drug-induced extrapyramidal reactions.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup2a, nkgi:targetgroup2b, nkgi:targetgroup2c;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=491aea85-5a55-4a7c-b1cf-a123fea4377d>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup2a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00915>;
+  bl:has_phenotype _:node240926, _:node240929 .
+
+<http://identifiers.org/drugbank/DB00915> bl:category bl:Drug .
+
+nkgi:targetgroup2b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00915>;
+  bl:has_phenotype _:node240932, _:node240935 .
+
+nkgi:targetgroup2c a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00915>;
+  bl:has_phenotype _:node240938, _:node240941 .
+
+nkgi:context20 rdf:object _:node240944 .
+
+_:node240944 bl:category bl:Disease .
+
+nkgi:context20 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00813>;
+  rdfs:label "ABSTRAL® is indicated for the management of breakthrough pain in cancer patients 18 years of age and older who are already receiving, and who are tolerant to, around-the-clock opioid therapy for their underlying persistent cancer pain.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup20;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e60f00e9-2cf4-4c20-b570-1c2ea426c8c7>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup20 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00813> .
+
+<http://identifiers.org/drugbank/DB00813> bl:category bl:Drug .
+
+nkgi:context3 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01037>;
+  rdfs:label "Selegiline capsules, USP are indicated as an adjunct in the management of Parkinsonian patients being treated with levodopa/carbidopa who exhibit deterioration in the quality of their response to this therapy.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup3;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1924db3d-6a16-4496-cfd0-6903be146925>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup3 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01037> .
+
+<http://identifiers.org/drugbank/DB01037> bl:category bl:Drug .
+
+nkgi:context34 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00734>;
+  rdfs:label "Risperidone tablets are indicated for the acute and maintenance treatment of schizophrenia";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup34a, nkgi:targetgroup34b;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0c3eeb6-8a75-0b20-2008-396e63cddcdb>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup34B_ma .
+
+nkgi:targetgroup34a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00734> .
+
+<http://identifiers.org/drugbank/DB00734> bl:category bl:Drug .
+
+nd:TargetGroup34B_ma a bl:LifeStage;
+  rdfs:label "13-17 " .
+
+nkgi:targetgroup34b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00734> .
+
+nkgi:context41 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB08567>;
+  rdfs:label "Sertraline Tablets, USP are indicated for the treatment of major depressive disorder in adults.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup41;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9641190-9151-4f7e-89ff-1e7a818c30ee>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup41_ma .
+
+nd:TargetGroup41_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup41 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB08567> .
+
+<http://identifiers.org/drugbank/DB08567> bl:category bl:Drug .
+
+nkgi:context43 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB08567>;
+  rdfs:label "Sertraline tablets are indicated for the treatment of panic disorder in adults, with or without agoraphobia, as defined in DSM-IV.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup43;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9641190-9151-4f7e-89ff-1e7a818c30ee>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup43_ma .
+
+nd:TargetGroup43_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup43 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB08567> .
+
+nkgi:context44 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB08567>;
+  rdfs:label "Sertraline is indicated for the treatment of posttraumatic stress disorder in adults.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup44;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9641190-9151-4f7e-89ff-1e7a818c30ee>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup44_ma .
+
+nd:TargetGroup44_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup44 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB08567> .
+
+nkgi:context45 rdf:object _:node240949 .
+
+_:node240949 bl:category bl:Disease .
+
+nkgi:context45 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB08567>;
+  rdfs:label "Sertraline tablets are indicated for the treatment of social anxiety disorder, also known as social phobia in adults.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup45;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9641190-9151-4f7e-89ff-1e7a818c30ee>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup45_ma .
+
+nd:TargetGroup45_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup45 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB08567> .
+
+nkgi:context46 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00472>;
+  rdfs:label "Fluoxetine is indicated for the acute and maintenance treatment of Major Depressive Disorder in adult patients and in pediatric patients aged 8 to18 years";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup46a, nkgi:targetgroup46b;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59de2889-c3d3-4ebf-8826-13f30a3fa439>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup46A_ma, nd:TargetGroup46B_ma .
+
+nd:TargetGroup46A_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup46a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00472> .
+
+<http://identifiers.org/drugbank/DB00472> bl:category bl:Drug .
+
+nd:TargetGroup46B_ma a bl:LifeStage;
+  rdfs:label "2020-08-18T00:00:00"^^xsd:dateTime .
+
+nkgi:targetgroup46b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00472> .
+
+nkgi:context53 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00998>;
+  rdfs:label "Frovatriptan succinate tablets are indicated for the acute treatment of migraine with or without aura in adults.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup53;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=94b996dc-ddc4-41ce-9a9f-3d91cb187473>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup53_ma .
+
+nd:TargetGroup53_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup53 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00998> .
+
+<http://identifiers.org/drugbank/DB00998> bl:category bl:Drug .
+
+nkgi:context54 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00669>;
+  rdfs:label "Sumatriptan tablets are indicated for the acute treatment of migraine with or without aura in adults.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup54;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b2503fff-c978-4efa-b1b4-d7740b6b26f2>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup54_ma .
+
+nd:TargetGroup54_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup54 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00669> .
+
+<http://identifiers.org/drugbank/DB00669> bl:category bl:Drug .
+
+nkgi:context58 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB08815>;
+  rdfs:label "Treatment of adult and adolescent patients (13 to 17 years) with schizophrenia";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup58;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=afad3051-9df2-4c54-9684-e8262a133af8>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup58_ma .
+
+nd:TargetGroup58_ma a bl:LifeStage;
+  rdfs:label "13-17" .
+
+nkgi:targetgroup58 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB08815> .
+
+<http://identifiers.org/drugbank/DB08815> bl:category bl:Drug .
+
+nkgi:context7 rdf:object _:node240952 .
+
+_:node240952 bl:category bl:Disease .
+
+nkgi:context7 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00497>;
+  rdfs:label "OXYCODONE HCl EXTENDED-RELEASE TABLETS are indicated for the management of pain severe enough to require daily, around-the-clock, long-term opioid treatment and for which alternative treatment options are inadequate in: adults and Opioid-tolerant pediatric patients 11 years of age and older who are already receiving and tolerate a minimum daily opioid dose of at least 20 mg oxycodone orally or its equivalent";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup7;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5b52ff1-21a6-4d28-9982-55b4ac195fac>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup7 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00497> .
+
+<http://identifiers.org/drugbank/DB00497> bl:category bl:Drug .
+
+nkgi:context75 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB04896>;
+  rdfs:label "Milnacipran HCl tablets are indicated for the management of fibromyalgia.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup75;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eaa14195-1b9c-423c-9412-d2fe0857e39d>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup75_ma .
+
+nd:TargetGroup75_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup75 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB04896> .
+
+<http://identifiers.org/drugbank/DB04896> bl:category bl:Drug .
+
+nkgi:context76 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00371>;
+  rdfs:label "Meprobamate tablets are indicated for the management of anxiety disorders or for the short-term relief of the symptoms of anxiety. Anxiety or tension associated with the stress of everyday life usually do not require treatment with an anxiolytic.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup76;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3b255bcd-0218-44f8-830b-971f5ec45276>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup76 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00371>;
+  bl:has_phenotype <http://identifiers.org/meddra/10002855> .
+
+<http://identifiers.org/drugbank/DB00371> bl:category bl:Drug .
+
+nkgi:context8 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB14042>;
+  rdfs:label "EMGALITY is indicated for the treatment of episodic cluster headache in adults.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup8;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33a147be-233a-40e8-a55e-e40936e28db0>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup8_ma .
+
+nd:TargetGroup8_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup8 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB14042> .
+
+<http://identifiers.org/drugbank/DB14042> bl:category bl:Drug .
+
+nkgi:context82 rdf:object _:node240957 .
+
+_:node240957 bl:category bl:Disease .
+
+nkgi:context82 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00425>;
+  rdfs:label "Zolpidem Tartrate Tablets is indicated for the short-term treatment of insomnia characterized by difficulties with sleep initiation";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup82;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=021153ce-fe27-4ed1-8d88-b4157b0ed734>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup82 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00425>;
+  bl:has_phenotype _:node240958 .
+
+<http://identifiers.org/drugbank/DB00425> bl:category bl:Drug .
+
+nkgi:context83 rdf:object _:node240961 .
+
+_:node240961 bl:category bl:Disease .
+
+nkgi:context83 rdf:object _:node240965 .
+
+_:node240965 bl:category bl:Disease .
+
+nkgi:context83 rdf:object _:node240969 .
+
+_:node240969 bl:category bl:Disease .
+
+nkgi:context83 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01589>;
+  rdfs:label "Quazepam is indicated for the treatment of insomnia characterized by difficulty in falling asleep, frequent nocturnal awakenings, and/or early morning awakenings.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup83a, nkgi:targetgroup83b, nkgi:targetgroup83c;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7d63f3f-5303-48ab-bce2-35fd62c45799>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup83a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01589>;
+  bl:has_phenotype _:node240962 .
+
+<http://identifiers.org/drugbank/DB01589> bl:category bl:Drug .
+
+nkgi:targetgroup83b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01589>;
+  bl:has_phenotype _:node240966 .
+
+nkgi:targetgroup83c a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01589>;
+  bl:has_phenotype _:node240970 .
+
+nkgi:context86 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00656>;
+  rdfs:label "Trazodone hydrochloride tablets are indicated for the treatment of major depressive disorder (MDD) in adults";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup86;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed3039d8-3d27-4b71-a4b0-812943c9457f>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup86_ma .
+
+nd:TargetGroup86_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup86 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00656> .
+
+<http://identifiers.org/drugbank/DB00656> bl:category bl:Drug .
+
+nkgi:context91 rdf:object _:node240971 .
+
+_:node240971 bl:category bl:Disease .
+
+nkgi:context91 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00715>;
+  rdfs:label "Paroxetine tablets are indicated for the treatment of social anxiety disorder, also known as social phobia, as defined in DSM-IV (300.23).";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup91;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89dd7e24-85fc-4152-89ea-47ec2b48a1ed>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup91_ma .
+
+nd:TargetGroup91_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup91 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00715> .
+
+<http://identifiers.org/drugbank/DB00715> bl:category bl:Drug .
+
+nkgi:context92 rdf:object _:node240972 .
+
+_:node240972 bl:category bl:Disease .
+
+nkgi:context92 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00715>;
+  rdfs:label "Paroxetine tablets are indicated for the treatment of Generalized Anxiety Disorder (GAD), as defined in DSM-IV.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup92;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89dd7e24-85fc-4152-89ea-47ec2b48a1ed>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup92_ma .
+
+nd:TargetGroup92_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup92 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00715> .
+
+nkgi:context93 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00715>;
+  rdfs:label "Paroxetine tablets are indicated for the treatment of Posttraumatic Stress Disorder (PTSD).";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup93;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89dd7e24-85fc-4152-89ea-47ec2b48a1ed>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup93_ma .
+
+nd:TargetGroup93_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup93 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00715> .
+
+nkgi:context94 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01175>;
+  rdfs:label "Escitalopram oral solution, USP is indicated for the acute and maintenance treatment of major depressive disorder in adults and in adolescents 12 to 17 years of age";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup94;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c871d3fe-5ca2-410c-976d-9ec4b72c878f>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup94_ma .
+
+nd:TargetGroup94_ma a bl:LifeStage;
+  rdfs:label "2020-12-17T00:00:00"^^xsd:dateTime .
+
+nkgi:targetgroup94 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01175> .
+
+<http://identifiers.org/drugbank/DB01175> bl:category bl:Drug .
+
+nkgi:context95 rdf:object _:node240973 .
+
+_:node240973 bl:category bl:Disease .
+
+nkgi:context95 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01175>;
+  rdfs:label "Escitalopram oral solution, USP is indicated for the acute treatment of Generalized Anxiety Disorder (GAD) in adults";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup95;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c871d3fe-5ca2-410c-976d-9ec4b72c878f>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup95_ma .
+
+nd:TargetGroup95_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup95 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01175> .
+
+nkgi:context100 rdf:object _:node240974 .
+
+_:node240974 bl:category bl:Disease .
+
+nkgi:context100 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00482>;
+  rdfs:label "For the management of acute pain in adults";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup100;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=27d813ea-7798-09cb-734b-b970d7248f1f>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup100_ma .
+
+nd:TargetGroup100_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup100 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00482> .
+
+<http://identifiers.org/drugbank/DB00482> bl:category bl:Drug .
+
+nkgi:context103 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB14509>;
+  rdfs:label "Lithium Carbonate Extended-Release Tablets USP are indicated in the treatment of manic episodes of Bipolar Disorder.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup103;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ebda1da0-38a2-49a0-8478-5d1d991a63bd>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup103 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB14509>;
+  bl:has_phenotype <http://identifiers.org/meddra/10026778> .
+
+<http://identifiers.org/drugbank/DB14509> bl:category bl:Drug .
+
+nkgi:context128 rdf:object _:node240979 .
+
+_:node240979 bl:category bl:Disease .
+
+nkgi:context128 rdf:object _:node240983 .
+
+_:node240983 bl:category bl:Disease .
+
+nkgi:context128 rdf:object _:node240986 .
+
+_:node240986 bl:category bl:Disease .
+
+nkgi:context128 rdf:object _:node240990 .
+
+_:node240990 bl:category bl:Disease .
+
+nkgi:context128 rdf:object _:node240993 .
+
+_:node240993 bl:category bl:Disease .
+
+nkgi:context128 rdf:object _:node240997 .
+
+_:node240997 bl:category bl:Disease .
+
+nkgi:context128 rdf:object _:node241001 .
+
+_:node241001 bl:category bl:Disease .
+
+nkgi:context128 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01050>;
+  rdfs:label "Uses: temporarily reduces pains and aches due to headache, toothache, backache, menstrual cramps, the common cold, muscular aches, minor pains of arthritis, temporarily reduces fever";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup128;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5c65b691-b795-44a5-abb7-931cd772f1a1>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup128 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01050>;
+  bl:has_phenotype <http://identifiers.org/meddra/10016558>, <http://identifiers.org/meddra/10027324>,
+    _:node240980, _:node240987, _:node240994, _:node240998, _:node241002 .
+
+<http://identifiers.org/drugbank/DB01050> bl:category bl:Drug .
+
+nkgi:context134 rdf:object _:node241005 .
+
+_:node241005 bl:category bl:Disease .
+
+nkgi:context134 rdf:object _:node241009 .
+
+_:node241009 bl:category bl:Disease .
+
+nkgi:context134 rdf:object _:node241012 .
+
+_:node241012 bl:category bl:Disease .
+
+nkgi:context134 rdf:object _:node241016 .
+
+_:node241016 bl:category bl:Disease .
+
+nkgi:context134 rdf:object _:node241019 .
+
+_:node241019 bl:category bl:Disease .
+
+nkgi:context134 rdf:object _:node241023 .
+
+_:node241023 bl:category bl:Disease .
+
+nkgi:context134 rdf:object _:node241027 .
+
+_:node241027 bl:category bl:Disease .
+
+nkgi:context134 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00788>;
+  rdfs:label "Uses - temporarily relieves minor aches and pains due to: minor pain of arthritis, backache, headache, muscular aches, menstrual cramps, toothache, common cold, temporarily reduces fever";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup134;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc5ddcf2-640c-4683-a60f-ca1c8b418873>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup134 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00788>;
+  bl:has_phenotype <http://identifiers.org/meddra/10016558>, <http://identifiers.org/meddra/10027324>,
+    _:node241006, _:node241013, _:node241020, _:node241024, _:node241028 .
+
+<http://identifiers.org/drugbank/DB00788> bl:category bl:Drug .
+
+nkgi:context135 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00181>;
+  rdfs:label "Baclofen is useful for the alleviation of signs and symptoms of spasticity resulting from multiple sclerosis, particularly for the relief of flexor spasms and concomitant pain, clonus, and muscular rigidity.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup135;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=346af8fe-3816-49de-bfd3-5a7425e728f9>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup135 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00181>;
+  bl:has_phenotype _:node241031, _:node241034, _:node241037, _:node241040, _:node241043 .
+
+<http://identifiers.org/drugbank/DB00181> bl:category bl:Drug .
+
+nkgi:context136 rdf:object _:node241046 .
+
+_:node241046 bl:category bl:Disease .
+
+nkgi:context136 rdf:object _:node241049 .
+
+_:node241049 bl:category bl:Disease .
+
+nkgi:context136 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00586>;
+  rdfs:label "Diclofenac potassium tablets are indicated:For relief of mild to moderate pain";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup136a, nkgi:targetgroup136b;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=77b60a0c-e49a-4ad4-abb1-b662c24ab782>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup136a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00586>;
+  bl:has_phenotype <http://identifiers.org/snomedct/40196000> .
+
+<http://identifiers.org/drugbank/DB00586> bl:category bl:Drug .
+
+nkgi:targetgroup136b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00586>;
+  bl:has_phenotype <http://identifiers.org/snomedct/50415004> .
+
+nkgi:context139 rdf:object _:node241052 .
+
+_:node241052 bl:category bl:Disease .
+
+nkgi:context139 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00956>;
+  rdfs:label "Hydrocodone Bitartrate Extended-Release Capsules are indicated for the management of pain severe enough to require daily, around-the-clock, long-term opioid treatment and for which alternative treatment options are inadequate.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup139;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a7b8ea07-e926-f0a5-c20d-92f23ed350d0>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup139 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00956>;
+  bl:has_phenotype <http://identifiers.org/snomedct/76948002> .
+
+<http://identifiers.org/drugbank/DB00956> bl:category bl:Drug .
+
+nkgi:context140 rdf:object _:node241053 .
+
+_:node241053 bl:category bl:Disease .
+
+nkgi:context140 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00395>;
+  rdfs:label "Carisoprodol Tablets are indicated for the relief of discomfort associated with acute, painful musculoskeletal conditions in adults.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup140;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ab22f1be-16c8-45b6-adaf-09e08bf7a545>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup140_ma .
+
+nd:TargetGroup140_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup140 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00395>;
+  bl:has_phenotype <http://identifiers.org/meddra/10013082> .
+
+<http://identifiers.org/drugbank/DB00395> bl:category bl:Drug .
+
+nkgi:context15 rdf:object _:node241054 .
+
+_:node241054 bl:category bl:Disease .
+
+nkgi:context15 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB06283>;
+  rdfs:label "PRIALT (ziconotide) solution, intrathecal infusion is indicated for the management of severe chronic pain in adult patients for whom intrathecal therapy is warranted, and who are intolerant of or refractory to other treatment, such as systemic analgesics, adjunctive therapies, or intrathecal morphine";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup15;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b025d8ed-937d-4597-9ad1-0b2f6e0ee5b1>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup15_ma .
+
+nd:TargetGroup15_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup15 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB06283> .
+
+<http://identifiers.org/drugbank/DB06283> bl:category bl:Drug .
+
+nkgi:context156 rdf:object _:node241057 .
+
+_:node241057 bl:category bl:Disease .
+
+nkgi:context156 rdf:object _:node241060 .
+
+_:node241060 bl:category bl:Disease .
+
+nkgi:context156 rdf:object _:node241063 .
+
+_:node241063 bl:category bl:Disease .
+
+nkgi:context156 rdf:object _:node241066 .
+
+_:node241066 bl:category bl:Disease .
+
+nkgi:context156 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00295>;
+  rdfs:label "Morphine sulfate is indicated for the relief of severe pain";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup156, nkgi:targetgroup156a, nkgi:targetgroup156b, nkgi:targetgroup156c;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e360d6b6-d9ef-487d-bf14-fcbbee8beb29>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup156 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00295> .
+
+<http://identifiers.org/drugbank/DB00295> bl:category bl:Drug .
+
+nkgi:targetgroup156a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00295>;
+  bl:has_phenotype <http://identifiers.org/snomedct/76948002> .
+
+nkgi:targetgroup156b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00295>;
+  bl:has_phenotype <http://identifiers.org/snomedct/76948002> .
+
+nkgi:targetgroup156c a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00295>;
+  bl:has_phenotype <http://identifiers.org/snomedct/76948002> .
+
+nkgi:context161 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB04844>;
+  rdfs:label "Tetrabenazine tablets are indicated for the treatment of chorea associated with Huntington's disease.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup161;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=471ac1d8-e3ad-7729-87c5-c26ae92c32eb>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup161 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB04844>;
+  bl:has_phenotype _:node241069 .
+
+<http://identifiers.org/drugbank/DB04844> bl:category bl:Drug .
+
+nkgi:context164 rdf:object _:node241072 .
+
+_:node241072 bl:category bl:Disease .
+
+nkgi:context164 rdf:object _:node241076 .
+
+_:node241076 bl:category bl:Disease .
+
+nkgi:context164 rdf:object _:node241080 .
+
+_:node241080 bl:category bl:Disease .
+
+nkgi:context164 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01086>;
+  rdfs:label "USES: For the temporary relief of discomfort and pain associated with - minor burns and skin irritations, minor cuts and scrapes, itching";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup164;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=60cafbaf-8ec6-46a5-e053-2a91aa0af11f>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup164 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01086>;
+  bl:has_phenotype _:node241073, _:node241077, _:node241081 .
+
+<http://identifiers.org/drugbank/DB01086> bl:category bl:Drug .
+
+nkgi:context165 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00185>;
+  rdfs:label "Cevimeline hydrochloride capsules are indicated for the treatment of symptoms of dry mouth in patients with Sjögren’s Syndrome.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup165;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=773a19e8-4c3e-4414-99a6-aea98c9790ee>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup165 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00185>;
+  bl:has_phenotype _:node241084 .
+
+<http://identifiers.org/drugbank/DB00185> bl:category bl:Drug .
+
+nkgi:context166 rdf:object _:node241087 .
+
+_:node241087 bl:category bl:Disease .
+
+nkgi:context166 rdf:object _:node241090 .
+
+_:node241090 bl:category bl:Disease .
+
+nkgi:context166 rdf:object _:node241093 .
+
+_:node241093 bl:category bl:Disease .
+
+nkgi:context166 rdf:object _:node241096 .
+
+_:node241096 bl:category bl:Disease .
+
+nkgi:context166 rdf:object _:node241099 .
+
+_:node241099 bl:category bl:Disease .
+
+nkgi:context166 rdf:object _:node241102 .
+
+_:node241102 bl:category bl:Disease .
+
+nkgi:context166 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00316>;
+  rdfs:label "temporarily relieves minor aches and pains due to:•the common cold•headache•backache•minor pain of arthritis•toothache•muscular aches•premenstrual and menstrual cramps•temporarily reduces fever";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup166a, nkgi:targetgroup166b, nkgi:targetgroup166c,
+    nkgi:targetgroup166d, nkgi:targetgroup166e, nkgi:targetgroup166f;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f7cca9d-4230-49d7-b805-a1fbc73e31c9>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup166a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00316>;
+  bl:has_phenotype <http://identifiers.org/meddra/10019211> .
+
+<http://identifiers.org/drugbank/DB00316> bl:category bl:Drug .
+
+nkgi:targetgroup166b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00316>;
+  bl:has_phenotype <http://identifiers.org/meddra/10003993> .
+
+nkgi:targetgroup166c a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00316>;
+  bl:has_phenotype <http://identifiers.org/meddra/10044055> .
+
+nkgi:targetgroup166d a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00316>;
+  bl:has_phenotype <http://identifiers.org/meddra/10028361> .
+
+nkgi:targetgroup166e a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00316>;
+  bl:has_phenotype <http://identifiers.org/meddra/10027324> .
+
+nkgi:targetgroup166f a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00316>;
+  bl:has_phenotype _:node241103 .
+
+nkgi:context21 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00829>;
+  rdfs:label "Diazepam is indicated for the management of anxiety disorders for the short-term relief of the symptoms of anxiety. Anxiety or tension associated with the stress of everyday life usually does not require treatment with an anxiolytic.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup21;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa352464-14c8-49e9-b8b7-5a968b1cfa93>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup21 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00829>;
+  bl:has_phenotype _:node241106 .
+
+<http://identifiers.org/drugbank/DB00829> bl:category bl:Drug .
+
+nkgi:context27 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01238>;
+  rdfs:label "Aripiprazole oral solution is indicated for the treatment of: Irritability Associated with Autistic Disorder";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup27;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7f272100-e02f-4a16-bb39-a2bf844db4f9>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup27 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01238>;
+  bl:has_phenotype <http://identifiers.org/meddra/10022998> .
+
+<http://identifiers.org/drugbank/DB01238> bl:category bl:Drug .
+
+nkgi:context28 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00949>;
+  rdfs:label "Felbamate oral suspension is recommended for use only in those patients who respond inadequately to alternative treatments and whose epilepsy is so severe that a substantial risk of aplastic anemia and/or liver failure is deemed acceptable in light of the benefits conferred by its use";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup28;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2e325d79-d0a4-4af7-b09b-96ee5a5b2a37>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup28_ma .
+
+nd:TargetGroup28_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup28 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00949>;
+  bl:has_phenotype _:node241109 .
+
+<http://identifiers.org/drugbank/DB00949> bl:category bl:Drug .
+
+nkgi:context29 rdf:object _:node241112 .
+
+_:node241112 bl:category bl:Disease .
+
+nkgi:context29 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01080>;
+  rdfs:label "Vigabatrin for oral solution is indicated as adjunctive therapy for adults and pediatric patients 2 years of age and older with refractory complex partial seizures who have inadequately responded to several alternative treatments and for whom the potential benefits outweigh the risk of vision loss";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup29;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5b8fb137-848b-45fd-9107-a6db5a675360>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup29 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01080> .
+
+<http://identifiers.org/drugbank/DB01080> bl:category bl:Drug .
+
+nkgi:context30 rdf:object _:node241113 .
+
+_:node241113 bl:category bl:Disease .
+
+nkgi:context30 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01080>;
+  rdfs:label "Vigabatrin for oral solution is indicated as monotherapy for pediatric patients with infantile spasms 1 month to 2 years of age for whom the potential benefits outweigh the potential risk of vision loss";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup30;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5b8fb137-848b-45fd-9107-a6db5a675360>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup30_ma .
+
+nd:TargetGroup30_ma a bl:LifeStage;
+  rdfs:label "1Month - 2Years" .
+
+nkgi:targetgroup30 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01080> .
+
+nkgi:context31 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00252>;
+  rdfs:label "Extended phenytoin sodium capsules are indicated for the treatment of tonic-clonic (grand mal) and psychomotor (temporal lobe) seizures and prevention and treatment of seizures occurring during or following neurosurgery";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup31;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e467c02-49a0-4b62-b537-430fdfa4f10e>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup31 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00252>;
+  bl:has_phenotype _:node241116, _:node241119 .
+
+<http://identifiers.org/drugbank/DB00252> bl:category bl:Drug .
+
+nkgi:context32 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01320>;
+  rdfs:label "Fosphenytoin sodium injection is indicated for the treatment of generalized tonic-clonic status epilepticus and prevention and treatment of seizures occurring during neurosurgery.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup32a, nkgi:targetgroup32b;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b60c9c82-e5c7-4e05-98c7-5bbba4af04b2>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup32a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01320>;
+  bl:has_phenotype _:node241122 .
+
+<http://identifiers.org/drugbank/DB01320> bl:category bl:Drug .
+
+nkgi:targetgroup32b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01320>;
+  bl:has_phenotype _:node241125 .
+
+nkgi:context33 rdf:object _:node241128 .
+
+_:node241128 bl:category bl:Disease .
+
+nkgi:context33 rdf:object _:node241131 .
+
+_:node241131 bl:category bl:Disease .
+
+nkgi:context33 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB05316>;
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup33;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup33 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB05316>;
+  bl:has_phenotype <http://identifiers.org/meddra/10012260>, <http://identifiers.org/meddra/10019077> .
+
+<http://identifiers.org/drugbank/DB05316> bl:category bl:Drug .
+
+nkgi:context35 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00734>;
+  rdfs:label "Due to Janssen Pharmaceuticals Corporation’s marketing exclusivity rights, this drug product is not labeled for use in pediatric patients with bipolar mania. Pediatric use information for the treatment of pediatric patients with bipolar mania, 10 to 17 years of age, is approved for Janssen Pharmaceuticals Corporation’s risperidone drug products.",
+    "Risperidone tablets are indicated for the short-term treatment of acute manic or mixed episodes associated with Bipolar I Disorder in Adults";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup35a, nkgi:targetgroup35b;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0c3eeb6-8a75-0b20-2008-396e63cddcdb>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup35A_ma, nd:TargetGroup35B_ma .
+
+nd:TargetGroup35A_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup35a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00734>;
+  bl:has_phenotype <http://identifiers.org/meddra/10026778>, _:node241132, _:node241133 .
+
+nd:TargetGroup35B_ma a bl:LifeStage;
+  rdfs:label "2020-10-17T00:00:00"^^xsd:dateTime .
+
+nkgi:targetgroup35b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00734>;
+  bl:has_phenotype <http://identifiers.org/meddra/10026778>, _:node241134, _:node241135 .
+
+nkgi:context37 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00734>;
+  rdfs:label "Risperidone tablets are indicated for the treatment of irritability associated with autistic disorder in children and adolescents aged 5-16 years, including symptoms of aggression towards others, deliberate self-injuriousness, temper tantrums, and quickly changing moods";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup37;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0c3eeb6-8a75-0b20-2008-396e63cddcdb>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup37_ma .
+
+nd:TargetGroup37_ma a bl:LifeStage;
+  rdfs:label "2020-05-16T00:00:00"^^xsd:dateTime .
+
+nkgi:targetgroup37 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00734>;
+  bl:has_phenotype <http://identifiers.org/meddra/10022998> .
+
+nkgi:context40 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00458>;
+  rdfs:label "For the relief of symptoms of depression. Endogenous depression is more likely to be alleviated than other depressive states";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup40;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=92ca69d4-cdba-4789-91a9-922664d52498>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup40 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00458>;
+  bl:has_phenotype _:node241138 .
+
+<http://identifiers.org/drugbank/DB00458> bl:category bl:Drug .
+
+nkgi:context47 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00472>;
+  rdfs:label "Fluoxetine is indicated for the acute and maintenance treatment of obsessions and compulsions in adult patients and in pediatric patients aged 7 to 17 years with Obsessive Compulsive Disorder (OCD)";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup47;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59de2889-c3d3-4ebf-8826-13f30a3fa439>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup47_ma .
+
+nd:TargetGroup47_ma a bl:LifeStage;
+  rdfs:label "2020-07-17T00:00:00"^^xsd:dateTime, "adults" .
+
+nkgi:targetgroup47 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00472>;
+  bl:has_phenotype <http://identifiers.org/meddra/10010219>, _:node241139, _:node241140 .
+
+nkgi:context48 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00472>;
+  rdfs:label "Fluoxetine is indicated for the acute and maintenance treatment of binge-eating and vomiting behaviors in adult patients with moderate to severe Bulimia Nervosa";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup48;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59de2889-c3d3-4ebf-8826-13f30a3fa439>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup48_ma .
+
+nd:TargetGroup48_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup48 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00472>;
+  bl:has_phenotype <http://identifiers.org/meddra/10047700>, <http://identifiers.org/umls/c0424419> .
+
+nkgi:context5 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB09072>;
+  rdfs:label "Xyrem is indicated for the treatment of cataplexy or excessive daytime sleepiness (EDS) in patients 7 years of age and older with narcolepsy.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup5;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=926eb076-a4a8-45e4-91ef-411f0aa4f3ca>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup5 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB09072>;
+  bl:has_phenotype <http://identifiers.org/snomedct/900000000000448009>, <http://identifiers.org/umls/c0694563> .
+
+<http://identifiers.org/drugbank/DB09072> bl:category bl:Drug .
+
+nkgi:context51 rdf:object _:node241147 .
+
+_:node241147 bl:category bl:Disease .
+
+nkgi:context51 rdf:object _:node241151 .
+
+_:node241151 bl:category bl:Disease .
+
+nkgi:context51 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01173>;
+  rdfs:label "Orphenadrine citrate is indicated as an adjunct to rest, physical therapy, and other measures for the relief of discomfort associated with acute, painful musculo-skeletal conditions.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup51;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aec8ad3a-f717-4e74-b7b9-19debdaad79a>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup51 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01173>;
+  bl:has_phenotype _:node241148, _:node241152 .
+
+<http://identifiers.org/drugbank/DB01173> bl:category bl:Drug .
+
+nkgi:context52 rdf:object _:node241155 .
+
+_:node241155 bl:category bl:Disease .
+
+nkgi:context52 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00980>;
+  rdfs:label "Ramelteon tablets are indicated for the treatment of insomnia characterized by difficulty with sleep onset.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup52;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a89dae05-6c39-4072-b8ee-c4c35b46f7d4>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup52 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00980>;
+  bl:has_phenotype _:node241156 .
+
+<http://identifiers.org/drugbank/DB00980> bl:category bl:Drug .
+
+nkgi:context56 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB01100>;
+  rdfs:label "Pimozide Tablets, USP is indicated for the suppression of motor and phonic tics in patients with Tourette’s Disorder who have failed to respond satisfactorily to standard treatment.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup56;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70b079e2-a1f7-4a93-8685-d60a4d7c1280>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup56 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB01100>;
+  bl:has_phenotype <http://identifiers.org/umls/c0751901>, _:node241161 .
+
+<http://identifiers.org/drugbank/DB01100> bl:category bl:Drug .
+
+nkgi:context59 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB08815>;
+  rdfs:label "Monotherapy treatment of adult and pediatric patients (10 to 17 years) with major depressive episode associated with bipolar I disorder (bipolar depression)";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup59;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=afad3051-9df2-4c54-9684-e8262a133af8>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup59 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB08815>;
+  bl:has_phenotype _:node241164 .
+
+nkgi:context6 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00363>;
+  rdfs:label "Clozapine is indicated for reducing the risk of recurrent suicidal behavior in patients with schizophrenia or schizoaffective disorder who are judged to be at chronic risk for re-experiencing suicidal behavior, based on history and recent clinical state";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup6;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25c0c6d5-f7b0-48e4-e054-00144ff8d46c>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup6 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00363>;
+  bl:has_phenotype <http://identifiers.org/meddra/10065604> .
+
+<http://identifiers.org/drugbank/DB00363> bl:category bl:Drug .
+
+nkgi:context65 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00344>;
+  rdfs:label "Protriptyline hydrochloride is indicated for the treatment of symptoms of mental depression in patients who are under close medical supervision.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup65;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=700abc58-9362-4ef5-9d7a-dd3c4d364d0a>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup65 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00344>;
+  bl:has_phenotype <http://identifiers.org/meddra/10048013>, <http://identifiers.org/snomedct/248274002> .
+
+<http://identifiers.org/drugbank/DB00344> bl:category bl:Drug .
+
+nkgi:context72 rdf:object _:node241173 .
+
+_:node241173 bl:category bl:Disease .
+
+nkgi:context72 rdf:object _:node241176 .
+
+_:node241176 bl:category bl:Disease .
+
+nkgi:context72 rdf:object _:node241179 .
+
+_:node241179 bl:category bl:Disease .
+
+nkgi:context72 rdf:object _:node241182 .
+
+_:node241182 bl:category bl:Disease .
+
+nkgi:context72 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00829>;
+  rdfs:label "In acute alcohol withdrawal, diazepam may be useful in the symptomatic relief of acute agitation, tremor, impending or acute delirium tremens and hallucinosis.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup72;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa352464-14c8-49e9-b8b7-5a968b1cfa93>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup72 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00829>;
+  bl:has_phenotype <http://identifiers.org/meddra/10001497>, <http://identifiers.org/meddra/10012225>,
+    <http://identifiers.org/meddra/10044565>, <http://identifiers.org/snomedct/73917004> .
+
+nkgi:context74 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00780>;
+  rdfs:label "Phenelzine Sulfate Tablets, USP has been found to be effective in depressed patients clinically characterized as atypical, nonendogenous,neurotic";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup74;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40483372-448f-4284-976c-8462ef256661>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup74 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00780>;
+  bl:has_phenotype _:node241185, _:node241188, _:node241191, _:node241194 .
+
+<http://identifiers.org/drugbank/DB00780> bl:category bl:Drug .
+
+nkgi:context85 rdf:object _:node241195 .
+
+_:node241195 bl:category bl:Disease .
+
+nkgi:context85 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00193>;
+  rdfs:label "Tramadol hydrochloride tablets are indicated for the management of moderate to moderately severe pain in adults";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup85;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae7c54b1-b440-4cca-97e8-e5b825413d32>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606>;
+  bl:stage_qualifier nd:TargetGroup85_ma .
+
+nd:TargetGroup85_ma a bl:LifeStage;
+  rdfs:label "adults" .
+
+nkgi:targetgroup85 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00193> .
+
+<http://identifiers.org/drugbank/DB00193> bl:category bl:Drug .
+
+nkgi:context89 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00715>;
+  rdfs:label "Paroxetine tablets are indicated for the treatment of obsessions and compulsions in patients with obsessive compulsive disorder (OCD) as defined in the DSM-IV.";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup89;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=89dd7e24-85fc-4152-89ea-47ec2b48a1ed>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup89 a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00715>;
+  bl:has_phenotype <http://identifiers.org/meddra/10010219>, _:node241198 .
+
+nkgi:context96 rdf:object _:node241203 .
+
+_:node241203 bl:category bl:Disease .
+
+nkgi:context96 rdf:object _:node241206 .
+
+_:node241206 bl:category bl:Disease .
+
+nkgi:context96 rdf:predicate bl:treats;
+  rdf:subject <http://identifiers.org/drugbank/DB00230>;
+  rdfs:label "Pregbalin is indicated for:Management of neuropathic pain associated with diabetic peripheral neuropathy, Management of postherpetic neuralgia, Adjunctive therapy for the treatment of partial-onset seizures in patients 1 month of age and older, Management of fibromyalgia, Management of neuropathic pain associated with spinal cord injury";
+  bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation;
+  bl:has_evidence nkgi:targetgroup96a, nkgi:targetgroup96b;
+  bl:provided_by <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ebe34db4-816d-4f0a-adbb-826693662754>;
+  bl:relation <http://purl.obolibrary.org/obo/RO_0002606> .
+
+nkgi:targetgroup96a a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00230>;
+  bl:has_phenotype <http://identifiers.org/meddra/10012683> .
+
+<http://identifiers.org/drugbank/DB00230> bl:category bl:Drug .
+
+nkgi:targetgroup96b a <https://identifiers.org/eco:0000180>;
+  bl:category bl:EvidenceType;
+  bl:has_drug <http://identifiers.org/drugbank/DB00230>;
+  bl:has_phenotype <http://identifiers.org/meddra/10041552> .

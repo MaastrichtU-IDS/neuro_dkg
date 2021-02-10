@@ -1,0 +1,70 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX bl: <https://w3id.org/biolink/vocab/>
+PREFIX eco: <https://identifiers.org/eco:>
+PREFIX n: <http://www.w3id.org/neurodkg:>
+PREFIX nd: <http://www.w3id.org/neurodkg/Instances/>
+PREFIX drugbank: <https://identifiers.org/drugbank:>
+PREFIX neurodkg: <http://www.w3id.org/neurodkg:>
+
+PREFIX nkg: <https://w3id.org/neurodkg/>
+PREFIX nkgi: <https://w3id.org/neurodkg/instance/>
+PREFIX : <https://w3id.org/neurodkg/>
+
+CONSTRUCT {   
+ ?association
+    bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation ;
+    rdfs:label ?label ;
+    rdf:subject ?subject ;
+    rdf:predicate bl:treats ;
+    rdf:object ?object ;
+    bl:relation <http://purl.obolibrary.org/obo/RO_0002606> ;
+   
+    bl:has_evidence ?targetgroup ;
+    bl:provided_by ?dailymed ;    
+   
+    bl:stage_qualifier ?lifestage .
+  ?lifestage a bl:LifeStage ;
+    rdfs:label ?ag .
+
+  ?targetgroup a eco:0000180 ;
+    bl:category bl:EvidenceType ;
+    bl:has_drug ?subject;
+    bl:has_phenotype ?ph_c . #?ph_meddra, ?ph_snomect, ?ph_umls, ?ph .
+
+  ?subject bl:category bl:Drug .
+  ?object bl:category bl:Disease . 
+} 
+{
+  VALUES ?type {n:Indication n:SymptomaticRelief}
+ 	?i a ?type .
+  OPTIONAL { ?i rdfs:label ?label . }
+  OPTIONAL { ?i bl:provided_by ?dailymed . }
+    ?i n:drug ?drug .
+    ?i n:disease ?disease .
+    ?i n:targetGroup ?tg .
+    OPTIONAL {?tg n:hasSymptom ?ph .}
+    OPTIONAL { ?tg n:hasAgeGroup ?ag . }
+    OPTIONAL {?tg n:hasMinAge ?ma . }
+  #FILTER (?i = nd:context8)
+ 
+  
+BIND( IF(bound(?ag), URI(CONCAT(str(?tg), "_ag")), URI(bnode() )) AS ?lifestage)
+BIND( IF(bound(?ag), URI(CONCAT(str(?tg), "_ma")), URI(bnode() )) AS ?lifestage)
+BIND(URI((REPLACE(lcase(str(?i)),"http://www.w3id.org/neurodkg/instances/", "https://w3id.org/neurodkg/instance/"))) AS ?association)
+BIND(URI((REPLACE(lcase(str(?tg)),"http://www.w3id.org/neurodkg/instances/", "https://w3id.org/neurodkg/instance/"))) AS ?targetgroup)
+BIND(URI((REPLACE(str(?drug),"http://www.w3id.org/drugbank:", "http://identifiers.org/drugbank/"))) AS ?subject)
+
+BIND (lcase(str(?disease)) AS ?d) 
+BIND (IF (CONTAINS(?d, "doid"), URI(REPLACE(?p, "http://www.w3id.org/doid/", "http://purl.obolibrary.org/obo/DOID_")), 
+       IF (CONTAINS(?d, "snomedct"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/snomedct/", "http://identifiers.org/snomedct/")),
+        IF (CONTAINS(?d, "umls"), URI(REPLACE(?p, "http://bioportal.bioontology.org/ontologies/umls/", "http://identifiers.org/umls/")),
+          bnode()))) AS ?object)
+  
+BIND (lcase(str(?ph)) AS ?p) 
+BIND (IF (CONTAINS(?p, "meddra"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/meddra/", "http://identifiers.org/meddra/")), 
+       IF (CONTAINS(?p, "snomedct"), URI(REPLACE(?p, "http://purl.bioontology.org/ontology/snomedct/", "http://identifiers.org/snomedct/")),
+        IF (CONTAINS(?p, "umls"), URI(REPLACE(?p, "http://bioportal.bioontology.org/ontologies/umls/", "http://identifiers.org/umls/")),
+          bnode()))) AS ?ph_c)
+#BIND(URI("http://dailymed.org") AS ?dailymed)
+} 
