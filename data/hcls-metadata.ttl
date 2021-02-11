@@ -1,0 +1,118 @@
+@prefix ns1: <http://rdfs.org/ns/void#> .
+@prefix ns2: <http://ldf.fi/void-ext#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://schema.org/neurodkg> a ns1:Dataset ;
+    ns1:classPartition [ ns1:class <https://schema.org/MedicalTherapy> ;
+            ns1:distinctSubjects 75 ],
+        [ ns1:class <https://schema.org/Drug> ;
+            ns1:distinctSubjects 60 ],
+        [ ns1:class <https://schema.org/MedicalSymptom> ;
+            ns1:distinctSubjects 90 ],
+        [ ns1:class <https://schema.org/PeopleAudience> ;
+            ns1:distinctSubjects 95 ],
+        [ ns1:class <https://schema.org/MedicalCondition> ;
+            ns1:distinctSubjects 58 ],
+        [ ns1:class rdfs:Class ;
+            ns1:distinctSubjects 5 ],
+        [ ns1:class rdfs:Literal ;
+            ns1:distinctSubjects 165 ] ;
+    ns1:distinctObjects 345 ;
+    ns1:distinctSubjects 378 ;
+    ns1:entities 378 ;
+    ns1:properties 11 ;
+    ns1:propertyPartition [ ns1:classPartition [ ns1:class <https://schema.org/MedicalTherapy> ;
+                    ns1:distinctSubjects 75 ] ;
+            ns1:property rdf:type ;
+            ns1:triples 75 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/MedicalTherapy> ;
+                    ns1:distinctSubjects 75 ] ;
+            ns1:property <https://schema.org/targetPopulation> ;
+            ns1:triples 95 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/Drug> ;
+                    ns1:distinctSubjects 60 ] ;
+            ns1:property rdf:type ;
+            ns1:triples 60 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/MedicalSymptom> ;
+                    ns1:distinctSubjects 90 ] ;
+            ns1:property rdf:type ;
+            ns1:triples 90 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/MedicalSymptom> ;
+                    ns1:distinctSubjects 90 ] ;
+            ns1:property <http://www.w3.org/2002/07/owl#sameAs> ;
+            ns1:triples 90 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/PeopleAudience> ;
+                    ns1:distinctSubjects 95 ] ;
+            ns1:property rdf:type ;
+            ns1:triples 95 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/PeopleAudience> ;
+                    ns1:distinctSubjects 32 ] ;
+            ns1:property <https://schema.org/audienceType> ;
+            ns1:triples 33 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/PeopleAudience> ;
+                    ns1:distinctSubjects 39 ] ;
+            ns1:property <https://schema.org/healthCondition> ;
+            ns1:triples 58 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/MedicalCondition> ;
+                    ns1:distinctSubjects 58 ] ;
+            ns1:property rdf:type ;
+            ns1:triples 58 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/MedicalCondition> ;
+                    ns1:distinctSubjects 58 ] ;
+            ns1:property <https://schema.org/possibleTreatment> ;
+            ns1:triples 58 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/MedicalCondition> ;
+                    ns1:distinctSubjects 45 ] ;
+            ns1:property <https://schema.org/signOrSymptom> ;
+            ns1:triples 45 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/MedicalTherapy> ;
+                    ns1:distinctSubjects 74 ] ;
+            ns1:property rdfs:label ;
+            ns1:triples 75 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/MedicalTherapy> ;
+                    ns1:distinctSubjects 74 ] ;
+            ns1:property <https://w3id.org/biolink/vocab/provided_by> ;
+            ns1:triples 74 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/MedicalTherapy> ;
+                    ns1:distinctSubjects 75 ] ;
+            ns1:property <https://schema.org/drug> ;
+            ns1:triples 75 ],
+        [ ns1:classPartition [ ns1:class <https://schema.org/MedicalTherapy> ;
+                    ns1:distinctSubjects 75 ] ;
+            ns1:property <https://schema.org/indicationType> ;
+            ns1:triples 75 ],
+        [ ns2:objectClassPartition [ ns1:class rdfs:Literal ;
+                    ns1:distinctObjects 78 ] ;
+            ns1:property <http://www.w3.org/2002/07/owl#sameAs> ;
+            ns1:triples 90 ],
+        [ ns2:objectClassPartition [ ns1:class rdfs:Literal ;
+                    ns1:distinctObjects 75 ] ;
+            ns1:property rdfs:label ;
+            ns1:triples 75 ],
+        [ ns2:objectClassPartition [ ns1:class rdfs:Literal ;
+                    ns1:distinctObjects 12 ] ;
+            ns1:property <https://schema.org/audienceType> ;
+            ns1:triples 33 ],
+        [ ns2:objectClassPartition [ ns1:class <https://schema.org/MedicalTherapy> ;
+                    ns1:distinctObjects 27 ] ;
+            ns1:property <https://schema.org/possibleTreatment> ;
+            ns1:triples 58 ],
+        [ ns2:objectClassPartition [ ns1:class <https://schema.org/Drug> ;
+                    ns1:distinctObjects 60 ] ;
+            ns1:property <https://schema.org/drug> ;
+            ns1:triples 75 ],
+        [ ns2:objectClassPartition [ ns1:class <https://schema.org/PeopleAudience> ;
+                    ns1:distinctObjects 95 ] ;
+            ns1:property <https://schema.org/targetPopulation> ;
+            ns1:triples 95 ],
+        [ ns2:objectClassPartition [ ns1:class <https://schema.org/MedicalCondition> ;
+                    ns1:distinctObjects 58 ] ;
+            ns1:property <https://schema.org/healthCondition> ;
+            ns1:triples 58 ],
+        [ ns2:objectClassPartition [ ns1:class <https://schema.org/MedicalSymptom> ;
+                    ns1:distinctObjects 39 ] ;
+            ns1:property <https://schema.org/signOrSymptom> ;
+            ns1:triples 45 ] ;
+    ns1:triples 1056 .
+
