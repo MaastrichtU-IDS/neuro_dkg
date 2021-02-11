@@ -43,7 +43,7 @@
     nt:hasPrefixLabel " has the drug" ;
     nt:hasRegex "[A-Z]{2}\d{5}" .
 
-  :disease  a nt:GuidedChoicePlaceholder ;
+  :disease a nt:GuidedChoicePlaceholder ;
     rdfs:label "has disease using DOID" ;
     nt:possibleValuesFromApi "http://data.bioontology.org/search?pagesize=20&apikey=fd451bec-eacd-4519-b972-90fb6c7007cb&include_properties=false&ontologies=DOID&q=" .
 
