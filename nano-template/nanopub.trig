@@ -43,7 +43,7 @@
     nt:hasPrefixLabel " has the drug" ;
     nt:hasRegex "[A-Z]{2}\d{5}" .
 
-   :disease  a nt:GuidedChoicePlaceholder ;
+  :disease  a nt:GuidedChoicePlaceholder ;
     rdfs:label "has disease using DOID" ;
     nt:possibleValuesFromApi "http://data.bioontology.org/search?pagesize=20&apikey=fd451bec-eacd-4519-b972-90fb6c7007cb&include_properties=false&ontologies=DOID&q=" .
 
@@ -79,7 +79,7 @@
 
   :maxAge a nt:LiteralPlaceholder;
     rdfs:label "Audiences defined by a person's maximum age." ;
-     nt:hasRegex "[0-9]*" .
+    nt:hasRegex "[0-9]*" .
 
 
   :quote a nt:LocalResource ;
@@ -97,11 +97,11 @@
     nt:statementOrder 1 .
 
 
-   :st00a  rdf:object :quote ;
+  :st00a  rdf:object :quote ;
     rdf:predicate prov:wasDerivedFrom ;
     rdf:subject :medtherapy ;
     a rdf:Statement ;
-     nt:statementOrder 1 .
+    nt:statementOrder 1 .
 
   :st00b  rdf:object :quotedtext ;
     rdf:predicate prov:value ;
@@ -134,45 +134,50 @@
     nt:statementOrder 4 .
   
 
-   :st04 rdf:subject :medtherapy;
+  :st04 rdf:subject :medtherapy;
     rdf:predicate schema:targetPopulation ;
     rdf:object  :targetpop   ;
     a rdf:Statement ;
 
     nt:statementOrder 5 .
 
-  :st05 rdf:type nt:OptionalStatement , nt:GroupedStatement ;
+  :st05 rdf:type nt:OptionalStatement , nt:GroupedStatement, nt:RepeatableStatement ;
     nt:hasStatement :st05a , :st05b , :st05c, :st05d, :st05e ;
     nt:statementOrder 6 .
 
   :st05a rdf:subject :targetpop ;
     rdf:predicate schema:audienceType ;
     rdf:object  :audienceType   ;
-    a nt:OptionalStatement , nt:RepeatableStatement ;
+    a rdf:Statement ;
+    # a nt:OptionalStatement , nt:RepeatableStatement ;
     nt:statementOrder 1 .
     
   :st05b rdf:subject :targetpop ;
     rdf:predicate schema:requiredMinAge ;
     rdf:object  :minAge   ;
-    a nt:OptionalStatement ;
+    a rdf:Statement ;
+    # a nt:OptionalStatement ;
     nt:statementOrder 2 .
 
   :st05c rdf:subject :targetpop ;
     rdf:predicate schema:requiredMaxAge ;
     rdf:object  :maxAge   ;
-    a nt:OptionalStatement ;
+    a rdf:Statement ;
+    # a nt:OptionalStatement ;
     nt:statementOrder 3 .
 
   :st05d rdf:object  :conditionURI   ;
     rdf:predicate schema:healthCondition ;
     rdf:subject :targetpop  ;
-    a nt:OptionalStatement , nt:RepeatableStatement ;
+    # a nt:OptionalStatement , nt:RepeatableStatement ;
+    a nt:RepeatableStatement ;
     nt:statementOrder 4 .
 
   :st05e rdf:subject :conditionURI ;
     rdf:predicate schema:signOrSymptom ;
     rdf:object  :symptom   ;
-    a nt:OptionalStatement , nt:RepeatableStatement ;
+    a nt:RepeatableStatement ;
+    # a nt:OptionalStatement , nt:RepeatableStatement ;
     nt:statementOrder 5 .
 
   owl:sameAs rdfs:label "corresponds to the term" .
@@ -193,8 +198,8 @@
   :assertion prov:wasAttributedTo orcid:0000-0001-7769-4272 .
 }
 :pubinfo {
-   : dct:created "2021-02-10T18:00:00.000+01:00"^^xsd:dateTime ;
+  : dct:created "2021-02-10T18:00:00.000+01:00"^^xsd:dateTime ;
     dct:creator orcid:0000-0001-7769-4272 ;
-    npx:supercedes <http://purl.org/np/RA1qFYcifL-R-TLdaNFuglOprNuiUZDy2S0bifJPi3aPk> .
+    npx:supercedes <http://purl.org/np/RAMDYfA4Ndzrvu1GRyMKa5UbJgIgDf2WGO3hIdW7gtUgQ> .
 
 }
