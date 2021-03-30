@@ -1,0 +1,8 @@
+SELECT ?stype (count(distinct *) AS ?triples) ?otype
+FROM <https://w3id.org/neurodkg/schema>
+{
+  ?s a ?stype.
+  ?s ?p ?o.
+  ?o a ?otype .
+}
+GROUP BY ?stype ?otype

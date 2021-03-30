@@ -1,0 +1,2 @@
+SELECT ?type (count(distinct *) AS ?number) FROM <https://w3id.org/neurodkg/schema> 
+{?x a ?type} GROUP BY ?type
