@@ -1,5 +1,5 @@
-@prefix this: <http://purl.org/np/RAMDYfA4Ndzrvu1GRyMKa5UbJgIgDf2WGO3hIdW7gtUgQ> .
-@prefix sub: <http://purl.org/np/RAMDYfA4Ndzrvu1GRyMKa5UbJgIgDf2WGO3hIdW7gtUgQ#> .
+@prefix this: <http://purl.org/np/RA56KBJXCfPObqVb3hNCSbbohzz02_VEW2PxnmyIQ0Hus> .
+@prefix sub: <http://purl.org/np/RA56KBJXCfPObqVb3hNCSbbohzz02_VEW2PxnmyIQ0Hus#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -23,7 +23,8 @@ sub:Head {
 sub:assertion {
   sub:assertion a nt:AssertionTemplate;
     rdfs:label "Defining a drug indication with its medical context";
-    nt:hasStatement sub:st00, sub:st01, sub:st02, sub:st03, sub:st04, sub:st05 .
+    nt:hasStatement sub:st00, sub:st01, sub:st02, sub:st03, sub:st04, sub:st05a, sub:st05b,
+      sub:st05c, sub:st05d, sub:st05e .
   
   sub:audienceType a nt:LiteralPlaceholder;
     rdfs:label "has the target group (eg. adult, pregnant)" .
@@ -119,39 +120,35 @@ sub:assertion {
     a rdf:Statement;
     nt:statementOrder 5 .
   
-  sub:st05 a nt:GroupedStatement, nt:OptionalStatement;
-    nt:hasStatement sub:st05a, sub:st05b, sub:st05c, sub:st05d, sub:st05e;
-    nt:statementOrder 6 .
-  
   sub:st05a rdf:object sub:audienceType;
     rdf:predicate schema:audienceType;
     rdf:subject sub:targetpop;
     a nt:OptionalStatement, nt:RepeatableStatement;
-    nt:statementOrder 1 .
+    nt:statementOrder 6 .
   
   sub:st05b rdf:object sub:minAge;
     rdf:predicate schema:requiredMinAge;
     rdf:subject sub:targetpop;
     a nt:OptionalStatement;
-    nt:statementOrder 2 .
+    nt:statementOrder 7 .
   
   sub:st05c rdf:object sub:maxAge;
     rdf:predicate schema:requiredMaxAge;
     rdf:subject sub:targetpop;
     a nt:OptionalStatement;
-    nt:statementOrder 3 .
+    nt:statementOrder 8 .
   
   sub:st05d rdf:object sub:conditionURI;
     rdf:predicate schema:healthCondition;
     rdf:subject sub:targetpop;
     a nt:OptionalStatement, nt:RepeatableStatement;
-    nt:statementOrder 4 .
+    nt:statementOrder 9 .
   
   sub:st05e rdf:object sub:symptom;
     rdf:predicate schema:signOrSymptom;
     rdf:subject sub:conditionURI;
     a nt:OptionalStatement, nt:RepeatableStatement;
-    nt:statementOrder 5 .
+    nt:statementOrder 10 .
   
   sub:symptom a nt:GuidedChoicePlaceholder;
     rdfs:label "target biomedical entity from Translator NameResolution API";
@@ -193,11 +190,11 @@ sub:provenance {
 
 sub:pubinfo {
   sub:sig npx:hasAlgorithm "RSA";
-    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCOqbrPT5RmzxsvRXGHZSAXPzeRLt9ogiosL3tcPKC0g5J8B1577lnJ3oVKSfD80lgPJdr9K671RazGL/mkZ/yu/uCNqne07Q9jd6OIAEi3fldiVfGK8ZDh43rGWRuG+BlvbZ1lZRFrWsURTKTpMgh0C6vJFRIMkWH6ImbZC5JbbQIDAQAB";
-    npx:hasSignature "ejO0qs6qmSajqZrtAjCGCrfij4VuwDYoJm9bSAyxLTfXCDTo5rf1kYk8PV8GAA+hT5pWo+zXLvAPCqCjBlPjPOmnyeu1Jht/JTJeymhtLP7qtXIttTmNGJMqzrZlh0tUcAO4rSFK2xuy6Y9bzatPZ6Ez29rhzwwoWfZbfBLstKk=";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCR9fz0fKCdWOWC+pxhkQhEM/ppbdIYe5TLSdj+lJzSlv9mYBaPgrzVezSwwbmhlHBPDZa4/vHycU315BdmUGq+pXllp9+rWFfrb+kBJwhZjpG6BeyyXBsRFz4jmQVxl/ZYHilQTh/XalYzKkEAyTiEMPee4Kz61PaWOKH24CsnOQIDAQAB";
+    npx:hasSignature "JBYaKLoPbBfHWeDN8hJRWpefZX/gFZMKjQJJkFDhmpFyley84tbfzR9xNmsn/GvOMUnBkfoCvcsLHKoqR+cAX/9KfCLbAsANb01EJWUXnWWsjjb4tCYWBhACAuq/I9xaN9k34nJTrEyN+MFDH1ilyWPX83reiLBtzqEdNUVviOY=";
     npx:hasSignatureTarget this: .
   
   this: dct:created "2021-02-10T18:00:00.000+01:00"^^xsd:dateTime;
     dct:creator orcid:0000-0001-7769-4272;
-    npx:supercedes <http://purl.org/np/RA1qFYcifL-R-TLdaNFuglOprNuiUZDy2S0bifJPi3aPk> .
+    npx:supercedes <http://purl.org/np/RA64ptuigOfVGfIhpdwWeJnssaHV9jTQCnAm6Pvgrvmos> .
 }

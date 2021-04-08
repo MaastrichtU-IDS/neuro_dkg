@@ -29,10 +29,9 @@
 }
 :assertion {
 
-
   :assertion a nt:AssertionTemplate ;
     rdfs:label "Defining a drug indication with its medical context" ;
-    nt:hasStatement :st00,  :st01, :st02, :st03, :st04, :st05.
+    nt:hasStatement :st00,  :st01, :st02, :st03, :st04, :st05a , :st05b , :st05c, :st05d, :st05e .
 
   :medtherapy a nt:LocalResource ;
     rdfs:label "This medical therapy " .
@@ -138,47 +137,46 @@
     rdf:predicate schema:targetPopulation ;
     rdf:object  :targetpop   ;
     a rdf:Statement ;
-
     nt:statementOrder 5 .
 
-  :st05 rdf:type nt:OptionalStatement , nt:GroupedStatement, nt:RepeatableStatement ;
-    nt:hasStatement :st05a , :st05b , :st05c, :st05d, :st05e ;
-    nt:statementOrder 6 .
+  # :st05 rdf:type nt:OptionalStatement , nt:GroupedStatement, nt:RepeatableStatement ;
+  #   nt:hasStatement :st05a , :st05b , :st05c, :st05d, :st05e ;
+  #   nt:statementOrder 6 .
 
   :st05a rdf:subject :targetpop ;
     rdf:predicate schema:audienceType ;
     rdf:object  :audienceType   ;
-    a rdf:Statement ;
-    # a nt:OptionalStatement , nt:RepeatableStatement ;
-    nt:statementOrder 1 .
+    # a rdf:Statement ;
+    a nt:OptionalStatement , nt:RepeatableStatement ;
+    nt:statementOrder 6 .
     
   :st05b rdf:subject :targetpop ;
     rdf:predicate schema:requiredMinAge ;
     rdf:object  :minAge   ;
-    a rdf:Statement ;
-    # a nt:OptionalStatement ;
-    nt:statementOrder 2 .
+    # a rdf:Statement ;
+    a nt:OptionalStatement ;
+    nt:statementOrder 7 .
 
   :st05c rdf:subject :targetpop ;
     rdf:predicate schema:requiredMaxAge ;
     rdf:object  :maxAge   ;
-    a rdf:Statement ;
-    # a nt:OptionalStatement ;
-    nt:statementOrder 3 .
+    # a rdf:Statement ;
+    a nt:OptionalStatement ;
+    nt:statementOrder 8 .
 
   :st05d rdf:object  :conditionURI   ;
     rdf:predicate schema:healthCondition ;
     rdf:subject :targetpop  ;
-    # a nt:OptionalStatement , nt:RepeatableStatement ;
-    a nt:RepeatableStatement ;
-    nt:statementOrder 4 .
+    a nt:OptionalStatement , nt:RepeatableStatement ;
+    # a nt:RepeatableStatement ;
+    nt:statementOrder 9 .
 
   :st05e rdf:subject :conditionURI ;
     rdf:predicate schema:signOrSymptom ;
     rdf:object  :symptom   ;
-    a nt:RepeatableStatement ;
-    # a nt:OptionalStatement , nt:RepeatableStatement ;
-    nt:statementOrder 5 .
+    # a nt:RepeatableStatement ;
+    a nt:OptionalStatement , nt:RepeatableStatement ;
+    nt:statementOrder 10 .
 
   owl:sameAs rdfs:label "corresponds to the term" .
   prov:wasDerivedFrom rdfs:label "was derived from" .
@@ -200,6 +198,6 @@
 :pubinfo {
   : dct:created "2021-02-10T18:00:00.000+01:00"^^xsd:dateTime ;
     dct:creator orcid:0000-0001-7769-4272 ;
-    npx:supercedes <http://purl.org/np/RAMDYfA4Ndzrvu1GRyMKa5UbJgIgDf2WGO3hIdW7gtUgQ> .
+    npx:supercedes <http://purl.org/np/RA64ptuigOfVGfIhpdwWeJnssaHV9jTQCnAm6Pvgrvmos> .
 
 }
