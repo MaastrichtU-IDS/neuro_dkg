@@ -1,0 +1,284 @@
+@prefix ns1: <https://schema.org/> .
+@prefix ns2: <http://www.w3.org/ns/prov#> .
+@prefix ns3: <https://w3id.org/neurodkg/> .
+
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C9203> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RAStRuG2TC8tk3ff6If3504yWIwUTwvH8qZO-O7V18A7A#association> .
+
+<https://identifiers.org/HP:0032659> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RA7Fr6GJBnZ1EWjb4jKbsXbMnXDFqC5xesUxcdYEkX5LM#association> .
+
+<https://identifiers.org/MONDO:0001945> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RAKNfDIO1Xe01m9uv4yFXrYrKsbwQiSdPvpK24iqCH4es#association>,
+        <http://purl.org/np/RAdzZfNP3FR9iEtT0sOp4die14iSu2iU8pUU8efN5VJeA#association> .
+
+<https://identifiers.org/MONDO:0005090> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RALtE7Hnj6rkqaoYCr3Pf611dZcjE7GYLMPhg4Tlzi8cQ#association>,
+        <http://purl.org/np/RAnydtC12LhXGF-hxd0dL99vKOdobRbTgdtDNnbjoIytw#association> .
+
+<https://identifiers.org/MONDO:0005180> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RATTKYuXt9v3tJu08ObBIT6x6-QSsIM6LQmBG4n0QkbW4#association>,
+        <http://purl.org/np/RAuopBixassaSOLR7lE9c-s_3UNX7dL69EVOeY4tgp8OE#association> .
+
+<https://identifiers.org/MONDO:0005277> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RAG6t1GxGSN6RH1EqWONkBadVZPC5SOawHe6FAYjKujkc#association>,
+        <http://purl.org/np/RAQDNFfhHGiatY6Vqfh-YoX1uCNsQNqLizUeHoUygRttQ#association> .
+
+<https://identifiers.org/MONDO:0005384> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RA_MJldfjvpLFE5RF0tMG5eHg4tYnbjd3JOCMsQxqTNzk#association> .
+
+<https://identifiers.org/MONDO:0005618> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RADb9I2Nhsc9xqG2L9Ok6yo7Fha2yvvtCDkiyFZP5476Q#association> .
+
+<https://identifiers.org/MONDO:0006966> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RA8nK1kh1RiuFaqP-RHp2tpAeYCfxufGdy9GZpk3-8LLk#association> .
+
+<https://identifiers.org/MONDO:0013600> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RAKjCVeq8YjwNP6XXn-taWvC00GILV82tCJ_FWy8T0vuE#association> .
+
+<https://identifiers.org/MONDO:0016158> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RAYbeVW339VIwq71uU9xabJxqiH_KMMqhjaZWWN2cn0dA#association> .
+
+<https://identifiers.org/MONDO:0021668> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RA7wRogkbsj2tbG4zG0Mb1DiD0xuzAo0MWsw8wFwkQ45Q#association>,
+        <http://purl.org/np/RAeMUX2d_wfvZinhs9mygYktXJofHWbGeuYQXvWA029oI#association>,
+        <http://purl.org/np/RAoZURvqojuDxHzi2pYj0xmhs2oTGERwhNVcU12hxW49c#association>,
+        <http://purl.org/np/RAxfNMrBvfY_RQfP2jDUuVScoj6WeYT3Z4QPd7hNJHelM#association> .
+
+<https://identifiers.org/MONDO:0043537> a ns1:MedicalCondition ;
+    ns1:possibleTreatment <http://purl.org/np/RA7k_pk6RqgntjF86QAJhA1fHTohtxaP1CjCCcF74Cdr0#association>,
+        <http://purl.org/np/RAMsEtsE0LCGhGrO6ArjE6vA-goNUbgvU74ukuTE8jfQA#association> .
+
+<http://purl.org/np/RA7Fr6GJBnZ1EWjb4jKbsXbMnXDFqC5xesUxcdYEkX5LM#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Lorazepam injection is indicated for the treatment of status epilepticus." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae274b1f-27c3-483b-99f1-9a9249dc2459> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:52993> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RA7k_pk6RqgntjF86QAJhA1fHTohtxaP1CjCCcF74Cdr0#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Almotriptan tablets (almotriptan malate) are indicated for the acute treatment of migraine attacks in patients with a history of migraine with or without aura" ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=35617039-9f33-401b-bac3-8f85c65fa2c7> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:520985> ;
+    ns1:targetPopulation <http://purl.org/np/RA7k_pk6RqgntjF86QAJhA1fHTohtxaP1CjCCcF74Cdr0#cohort> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RA7k_pk6RqgntjF86QAJhA1fHTohtxaP1CjCCcF74Cdr0#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "patients with a history of migraine with or without aura" .
+
+<http://purl.org/np/RA7wRogkbsj2tbG4zG0Mb1DiD0xuzAo0MWsw8wFwkQ45Q#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "PRIALT (ziconotide) solution, intrathecal infusion is indicated for the management of severe chronic pain in adult patients for whom intrathecal therapy is warranted, and who are intolerant of or refractory to other treatment, such as systemic analgesics, adjunctive therapies, or intrathecal morphine" ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b025d8ed-937d-4597-9ad1-0b2f6e0ee5b1> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:142406> ;
+    ns1:targetPopulation <http://purl.org/np/RA7wRogkbsj2tbG4zG0Mb1DiD0xuzAo0MWsw8wFwkQ45Q#cohort> ;
+    ns3:indicationType <https://w3id.org/um/neurodkg/SymptomaticReliefIndication> .
+
+<http://purl.org/np/RA7wRogkbsj2tbG4zG0Mb1DiD0xuzAo0MWsw8wFwkQ45Q#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "adult patients for whom intrathecal therapy is warranted, and who are intolerant of or refractory to other treatment, such as systemic analgesics, adjunctive therapies, or intrathecal morphine" ;
+    ns1:requiredMinAge "18" .
+
+<http://purl.org/np/RA8nK1kh1RiuFaqP-RHp2tpAeYCfxufGdy9GZpk3-8LLk#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Amantadine hydrochloride capsules are indicated in the treatment of idiopathic Parkinson’s disease (Paralysis Agitans), postencephalitic parkinsonism and symptomatic parkinsonism which may follow injury to the nervous system by carbon monoxide intoxication. It is indicated in those elderly patients believed to develop parkinsonism in association with cerebral arteriosclerosis.It is indicated in those elderly patients believed to develop parkinsonism in association with cerebral arteriosclerosis." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=491aea85-5a55-4a7c-b1cf-a123fea4377d> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:2619> ;
+    ns1:targetPopulation <http://purl.org/np/RA8nK1kh1RiuFaqP-RHp2tpAeYCfxufGdy9GZpk3-8LLk#cohort> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RA8nK1kh1RiuFaqP-RHp2tpAeYCfxufGdy9GZpk3-8LLk#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "elderly patients" ;
+    ns1:healthCondition <https://identifiers.org/MONDO:0006694> .
+
+<http://purl.org/np/RADb9I2Nhsc9xqG2L9Ok6yo7Fha2yvvtCDkiyFZP5476Q#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Lorazepam injection is indicated in adult patients for preanesthetic medication, producing sedation (sleepiness or drowsiness), relief of anxiety, and a decreased ability to recall events related to the day of surgery. It is most useful in those patients who are anxious about their surgical procedure and who would prefer to have diminished recall of the events of the day of surgery" ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae274b1f-27c3-483b-99f1-9a9249dc2459> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:52993> ;
+    ns3:indicationType <https://w3id.org/um/neurodkg/SymptomaticReliefIndication> .
+
+<http://purl.org/np/RAG6t1GxGSN6RH1EqWONkBadVZPC5SOawHe6FAYjKujkc#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "EMGALITY is indicated for the preventive treatment of migraine in adults." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33a147be-233a-40e8-a55e-e40936e28db0> ] ;
+    ns1:drug <https://identifiers.org/UNII:55KHL3P693> ;
+    ns1:targetPopulation <http://purl.org/np/RAG6t1GxGSN6RH1EqWONkBadVZPC5SOawHe6FAYjKujkc#cohort> ;
+    ns3:indicationType ns1:PreventionIndication .
+
+<http://purl.org/np/RAG6t1GxGSN6RH1EqWONkBadVZPC5SOawHe6FAYjKujkc#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "adults" ;
+    ns1:requiredMinAge "18" .
+
+<http://purl.org/np/RAKNfDIO1Xe01m9uv4yFXrYrKsbwQiSdPvpK24iqCH4es#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Amantadine hydrochloride capsules are indicated in the treatment of idiopathic Parkinson’s disease (Paralysis Agitans), postencephalitic parkinsonism and symptomatic parkinsonism which may follow injury to the nervous system by carbon monoxide intoxication. It is indicated in those elderly patients believed to develop parkinsonism in association with cerebral arteriosclerosis. It is indicated in those elderly patients believed to develop parkinsonism in association with cerebral arteriosclerosis." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=491aea85-5a55-4a7c-b1cf-a123fea4377d> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:2619> ;
+    ns1:targetPopulation <http://purl.org/np/RAKNfDIO1Xe01m9uv4yFXrYrKsbwQiSdPvpK24iqCH4es#cohort> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RAKNfDIO1Xe01m9uv4yFXrYrKsbwQiSdPvpK24iqCH4es#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "elderly patients" ;
+    ns1:healthCondition <https://identifiers.org/MONDO:0006694> .
+
+<http://purl.org/np/RAKjCVeq8YjwNP6XXn-taWvC00GILV82tCJ_FWy8T0vuE#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Temazepam is indicated for the short-term treatment of insomnia (generally 7 to 10 days)." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a4370eb4-b00d-4247-af8d-980e59fbbec6> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:9435> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RALtE7Hnj6rkqaoYCr3Pf611dZcjE7GYLMPhg4Tlzi8cQ#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Clozapine is indicated for reducing the risk of recurrent suicidal behavior in patients with schizophrenia or schizoaffective disorder who are judged to be at chronic risk for re-experiencing suicidal behavior, based on history and recent clinical state" ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25c0c6d5-f7b0-48e4-e054-00144ff8d46c> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:3766> ;
+    ns1:targetPopulation <http://purl.org/np/RALtE7Hnj6rkqaoYCr3Pf611dZcjE7GYLMPhg4Tlzi8cQ#cohort> ;
+    ns3:indicationType <https://w3id.org/um/neurodkg/SymptomaticReliefIndication> .
+
+<http://purl.org/np/RALtE7Hnj6rkqaoYCr3Pf611dZcjE7GYLMPhg4Tlzi8cQ#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "patients (...) who are judged to be at chronic risk for re-experiencing suicidal behavior" .
+
+<http://purl.org/np/RAMsEtsE0LCGhGrO6ArjE6vA-goNUbgvU74ukuTE8jfQA#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "EMGALITY is indicated for the treatment of episodic cluster headache in adults." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33a147be-233a-40e8-a55e-e40936e28db0> ] ;
+    ns1:drug <https://identifiers.org/UNII:55KHL3P693> ;
+    ns1:targetPopulation <http://purl.org/np/RAMsEtsE0LCGhGrO6ArjE6vA-goNUbgvU74ukuTE8jfQA#cohort> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RAMsEtsE0LCGhGrO6ArjE6vA-goNUbgvU74ukuTE8jfQA#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "adults" ;
+    ns1:requiredMinAge "18" .
+
+<http://purl.org/np/RAQDNFfhHGiatY6Vqfh-YoX1uCNsQNqLizUeHoUygRttQ#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "AIMOVIG is indicated for the preventive treatment of migraine in adults." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b998ed05-94b0-47fd-b28f-cddd1e128fd8> ] ;
+    ns1:drug <https://identifiers.org/UNII:I5I8VB78VT> ;
+    ns1:targetPopulation <http://purl.org/np/RAQDNFfhHGiatY6Vqfh-YoX1uCNsQNqLizUeHoUygRttQ#cohort> ;
+    ns3:indicationType ns1:PreventionIndication .
+
+<http://purl.org/np/RAQDNFfhHGiatY6Vqfh-YoX1uCNsQNqLizUeHoUygRttQ#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "adults" ;
+    ns1:requiredMinAge "18" .
+
+<http://purl.org/np/RAStRuG2TC8tk3ff6If3504yWIwUTwvH8qZO-O7V18A7A#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "ABSTRAL® is indicated for the management of breakthrough pain in cancer patients 18 years of age and older who are already receiving, and who are tolerant to, around-the-clock opioid therapy for their underlying persistent cancer pain." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e60f00e9-2cf4-4c20-b570-1c2ea426c8c7> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:119915> ;
+    ns1:targetPopulation <http://purl.org/np/RAStRuG2TC8tk3ff6If3504yWIwUTwvH8qZO-O7V18A7A#cohort> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RAStRuG2TC8tk3ff6If3504yWIwUTwvH8qZO-O7V18A7A#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "in cancer patients 18 years of age and older" ;
+    ns1:healthCondition <https://identifiers.org/MONDO:0005070> ;
+    ns1:requiredMinAge "18" .
+
+<http://purl.org/np/RATTKYuXt9v3tJu08ObBIT6x6-QSsIM6LQmBG4n0QkbW4#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Tolcapone tablets, USP is indicated as an adjunct to levodopa and carbidopa for the treatment of the signs and symptoms of idiopathic Parkinson's disease" ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d94891be-2fef-4e39-8e35-ab7afe93e78e> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:63630> ;
+    ns3:indicationType <https://w3id.org/um/neurodkg/SymptomaticReliefIndication> .
+
+<http://purl.org/np/RAYbeVW339VIwq71uU9xabJxqiH_KMMqhjaZWWN2cn0dA#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Xyrem is indicated for the treatment of cataplexy or excessive daytime sleepiness (EDS) in patients 7 years of age and older with narcolepsy." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=926eb076-a4a8-45e4-91ef-411f0aa4f3ca> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:30830> ;
+    ns1:targetPopulation <http://purl.org/np/RAYbeVW339VIwq71uU9xabJxqiH_KMMqhjaZWWN2cn0dA#cohort> ;
+    ns3:indicationType <https://w3id.org/um/neurodkg/SymptomaticReliefIndication> .
+
+<http://purl.org/np/RAYbeVW339VIwq71uU9xabJxqiH_KMMqhjaZWWN2cn0dA#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "patients 7 years of age and older" ;
+    ns1:requiredMinAge "7" .
+
+<http://purl.org/np/RA_MJldfjvpLFE5RF0tMG5eHg4tYnbjd3JOCMsQxqTNzk#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Gabapentin capsules, USP are indicated as adjunctive therapy in the treatment of partial seizures with and without secondary generalization in patients over 12 years of age with epilepsy. Gabapentin capsules, USP are also indicated as adjunctive therapy in the treatment of partial seizures in pediatric patients age 3 to 12 years." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0936a88f-b569-49c4-951b-14e8f6273b53> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:42797> ;
+    ns1:targetPopulation <http://purl.org/np/RA_MJldfjvpLFE5RF0tMG5eHg4tYnbjd3JOCMsQxqTNzk#cohort> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RA_MJldfjvpLFE5RF0tMG5eHg4tYnbjd3JOCMsQxqTNzk#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "patients over 12 years of age with epilepsy; pediatric patients age 3 to 12 years" ;
+    ns1:healthCondition <https://identifiers.org/MONDO:0005027> ;
+    ns1:requiredMinAge "3" .
+
+<http://purl.org/np/RAdzZfNP3FR9iEtT0sOp4die14iSu2iU8pUU8efN5VJeA#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Bromocriptine mesylate tablets are indicated in the treatment of the signs and symptoms of idiopathic or postencephalitic Parkinson's disease. As adjunctive treatment to levodopa (alone or with a peripheral decarboxylase inhibitor), bromocriptine mesylate therapy may provide additional therapeutic benefits in those patients who are currently maintained on optimal dosages of levodopa, those who are beginning to deteriorate (develop tolerance) to levodopa therapy, and those who are experiencing \"end of dose failure\" on levodopa therapy." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=93a0696b-b261-4262-9e06-f3180b419f8f> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:3182> ;
+    ns3:indicationType <https://w3id.org/um/neurodkg/SymptomaticReliefIndication> .
+
+<http://purl.org/np/RAeMUX2d_wfvZinhs9mygYktXJofHWbGeuYQXvWA029oI#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "OXYCODONE HCl EXTENDED-RELEASE TABLETS are indicated for the management of pain severe enough to require daily, around-the-clock, long-term opioid treatment and for which alternative treatment options are inadequate in: adults and Opioid-tolerant pediatric patients 11 years of age and older who are already receiving and tolerate a minimum daily opioid dose of at least 20 mg oxycodone orally or its equivalent" ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5b52ff1-21a6-4d28-9982-55b4ac195fac> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:7859> ;
+    ns1:targetPopulation <http://purl.org/np/RAeMUX2d_wfvZinhs9mygYktXJofHWbGeuYQXvWA029oI#cohort> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RAeMUX2d_wfvZinhs9mygYktXJofHWbGeuYQXvWA029oI#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "adults and Opioid-tolerant pediatric patients 11 years of age and older" ;
+    ns1:requiredMinAge "11" .
+
+<http://purl.org/np/RAnydtC12LhXGF-hxd0dL99vKOdobRbTgdtDNnbjoIytw#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Clozapine is indicated for the treatment of severely ill patients with schizophrenia who fail to respond adequately to standard antipsychotic treatment" ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25c0c6d5-f7b0-48e4-e054-00144ff8d46c> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:3766> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RAoZURvqojuDxHzi2pYj0xmhs2oTGERwhNVcU12hxW49c#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "ABSTRAL® is indicated for the management of breakthrough pain in cancer patients 18 years of age and older who are already receiving, and who are tolerant to, around-the-clock opioid therapy for their underlying persistent cancer pain." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e60f00e9-2cf4-4c20-b570-1c2ea426c8c7> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:119915> ;
+    ns1:targetPopulation <http://purl.org/np/RAoZURvqojuDxHzi2pYj0xmhs2oTGERwhNVcU12hxW49c#cohort> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RAoZURvqojuDxHzi2pYj0xmhs2oTGERwhNVcU12hxW49c#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "cancer patients 18 years of age and older who are already receiving, and who are tolerant to, around-the-clock opioid therapy for their underlying persistent cancer pain" ;
+    ns1:healthCondition <https://identifiers.org/MONDO:0005070> ;
+    ns1:requiredMinAge "18" .
+
+<http://purl.org/np/RAuopBixassaSOLR7lE9c-s_3UNX7dL69EVOeY4tgp8OE#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Amantadine hydrochloride capsules are indicated in the treatment of idiopathic Parkinson’s disease (Paralysis Agitans), postencephalitic parkinsonism and symptomatic parkinsonism which may follow injury to the nervous system by carbon monoxide intoxication. It is indicated in those elderly patients believed to develop parkinsonism in association with cerebral arteriosclerosis." ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=491aea85-5a55-4a7c-b1cf-a123fea4377d> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:2619> ;
+    ns1:targetPopulation <http://purl.org/np/RAuopBixassaSOLR7lE9c-s_3UNX7dL69EVOeY4tgp8OE#cohort> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<http://purl.org/np/RAuopBixassaSOLR7lE9c-s_3UNX7dL69EVOeY4tgp8OE#cohort> a ns1:PeopleAudience ;
+    ns1:audienceType "elderly patients" ;
+    ns1:healthCondition <https://identifiers.org/MONDO:0006694> .
+
+<http://purl.org/np/RAxfNMrBvfY_RQfP2jDUuVScoj6WeYT3Z4QPd7hNJHelM#association> a ns1:MedicalTherapy ;
+    ns2:wasDerivedFrom [ ns2:value "Clonidine hydrochloride injection is indicated in combination with opiates for the treatment of severe pain in cancer patients that is not adequately relieved by opioid analgesics alone" ;
+            ns2:wasQuotedFrom <https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d2b11e61-b2ef-4d20-8973-a4afc6b951ae> ] ;
+    ns1:drug <https://identifiers.org/CHEBI:3758> ;
+    ns3:indicationType ns1:TreatmentIndication .
+
+<https://identifiers.org/CHEBI:142406> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:30830> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:3182> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:3758> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:42797> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:520985> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:63630> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:7859> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:9435> a ns1:Drug .
+
+<https://identifiers.org/MONDO:0005027> a ns1:MedicalCondition .
+
+<https://identifiers.org/UNII:I5I8VB78VT> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:119915> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:3766> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:52993> a ns1:Drug .
+
+<https://identifiers.org/MONDO:0005070> a ns1:MedicalCondition .
+
+<https://identifiers.org/UNII:55KHL3P693> a ns1:Drug .
+
+<https://identifiers.org/CHEBI:2619> a ns1:Drug .
+
+<https://identifiers.org/MONDO:0006694> a ns1:MedicalCondition .
+
