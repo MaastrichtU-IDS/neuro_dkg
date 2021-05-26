@@ -1,0 +1,93 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX biolink: <https://w3id.org/biolink/vocab/>
+PREFIX bl: <https://w3id.org/biolink/vocab/>
+PREFIX np: <http://www.nanopub.org/nschema#>
+PREFIX npx: <http://purl.org/nanopub/x/>
+prefix npa: <http://purl.org/nanopub/admin/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX orcid: <https://orcid.org/>
+PREFIX schema: <https://schema.org/> 
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+PREFIX ndkg: <https://w3id.org/neurodkg/>
+PREFIX nkg: <https://w3id.org/neurodkg/>
+PREFIX nkgi: <https://w3id.org/neurodkg/instance/>
+PREFIX : <https://w3id.org/neurodkg/>
+CONSTRUCT{ 
+  ?association
+      bl:association_type bl:ChemicalToDiseaseOrPhenotypicFeatureAssociation ;
+      # Or bl:category? I think category is only for entities
+
+      rdfs:label ?label ;
+      rdf:subject ?subject ;
+      rdf:object ?object ;
+
+      rdf:predicate bl:treats ;
+      bl:relation ?relation ;
+      # Not sure what we should use for relation
+      # Sometime they use RO or Biolink in their examples
+      # bl:relation <http://purl.obolibrary.org/obo/RO_0002606> ;
+    
+      bl:provided_by "DailyMed" ;
+      # Translator seems to be using strings for provided_by
+
+      bl:has_evidence ?publications ;
+      bl:has_population_context ?target_population .
+      # bl:stage_qualifier ?lifestage .
+
+    # has_population_context
+    # https://biolink.github.io/biolink-model/docs/has_population_context.html
+    # StudyPopulation
+    # https://biolink.github.io/biolink-model/docs/StudyPopulation.html
+
+    # The publication evidence
+    # eco:0000180 = clinical study evidence
+    # https://bioportal.bioontology.org/ontologies/ECO/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FECO_0000180
+    ?publications a eco:0000180 ; 
+      bl:category bl:EvidenceType ;
+      rdfs:label ?label .
+
+    ?target_population
+      bl:category bl:StudyPopulation ;
+      rdfs:label ?target_pop_label ;
+      # bl:has_drug ?subject ;
+      bl:has_phenotype ?phenotype ;
+      bl:description ?age_range .
+
+    # min_age and max_age handling could be improved
+    # How to add ?symptom ?
+
+    # ?lifestage a bl:LifeStage ;
+    #   rdfs:label ?ag .
+
+    ?subject bl:category bl:Drug .
+    ?object bl:category bl:Disease . 
+
+} WHERE {
+  ?object schema:possibleTreatment ?association .
+  ?association schema:drug ?subject ;
+    ndkg:indicationType ?relation ;
+    prov:wasDerivedFrom ?quote .
+
+  ?quote prov:wasQuotedFrom ?publications ;
+    prov:value ?label .
+  
+  OPTIONAL {
+    ?association schema:targetPopulation ?target_population . 
+    ?target_population schema:audienceType ?target_pop_label .
+    OPTIONAL {
+      ?target_population schema:healthCondition ?phenotype .
+      OPTIONAL {
+        ?phenotype schema:signOrSymptom ?symptom .
+      }
+    }
+    OPTIONAL {
+      ?target_population schema:requiredMinAge ?min_age .
+    }
+    OPTIONAL {
+      ?target_population schema:requiredMaxAge ?max_age .
+    }
+    BIND(CONCAT(?min_age, ?max_age) AS ?age_range)
+  }
+}
